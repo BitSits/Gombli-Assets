@@ -1,0 +1,120 @@
+/* Base node */
+.node {clear: both; padding: 10px 0; margin: 3px 0 ;}
+.node h2.title { margin: 20px 0 0 0; font-size: 23px; font-weight: normal; color:#7a7a7a;}
+.node h2.title a { font-size: 23px; font-weight: normal; color:#74a09f;}
+#node-10532 h2.title { margin: 0; font-size: 23px; font-weight: normal; color:#7a7a7a;}
+/* Content */
+.node .content { margin: 1.5em 0; }
+/* Blog */
+.node.ntype-blog {background: url(http://designbump.com/sites/all/themes/designbumpv3/img/seperator.gif) no-repeat center bottom; margin: 0; padding: 0 0 20px 0; font-size:14px;}
+.node.ntype-blog h1, .node.ntype-blog h1 a {margin: 0 0 15px 0; padding: 3px 0 5px 0; font-size: 24px; font-weight: normal; color:#7a7a7a;}
+.node.ntype-blog h2 {margin: 0;}
+.node.ntype-blog h2 a {font-size:22px; color:#779FA0; font-weight: bold; line-height: 1.4em;}
+.node.ntype-blog h2 a:hover { color:#598281; text-decoration:none; }
+.node.ntype-blog .content h2 {margin: 0; font-size:26px; color:#779FA0; font-weight: bold; line-height: 1.4em;}
+.node.ntype-blog .content p { margin: 0; padding: 4px 0 0 0}
+.node.ntype-blog .content { margin:0; }
+.node.ntype-blog .links {font-size:8pt; margin: 10px 0 0 0;}
+.node.ntype-blog .links a {font-weight:bold;}
+.node.ntype-blog .links ul.links.inline li {margin: 0;}
+.node.ntype-blog .links li {display: inline; margin: 0;}
+.node.ntype-blog .offset { margin-left: 163px; padding:0 0 15px 0; }
+.postteaser {height:150px; width:150px; background-color:#e7e7e7; }
+.teaserterm {text-align: center; background: #779FA0; margin:5px 0 0 0; padding:4px;}
+.teaserterm a {font-size:12pt; color: #fff;  }
+.votewrap {float:left;}
+.blogwrap {margin: 30px 0 0 0;}
+.node.ntype-blog h1 ul.blogbuttons {margin:0; padding:0; list-style: none; display:inline;}
+.node.ntype-blog h1 ul.blogbuttons li, .node.ntype-blog h1 ul.blogbuttons li a {color:#fff; margin: 2px; padding:0; display:inline; font-size:20px;}
+/* Author  */
+.author {background-color:#f9f9f9; padding: 13px; min-height:113px;}
+.author h3 {margin: 0 0 7px 0;}
+.author h3 a {font-size:17px;}
+.author a { color: #779fa0;}
+.author div.picture {background-color:#fff; float: left; margin: 0 17px 0 0; padding:7px; height: 100px; width: 100px; overflow: hidden; border: 1px solid #ececec;}
+.author div.picture a, .author div.picture img {display: block; height: 100px; width: 100px; margin-left: 0px;}
+/* Drigg node */
+.node.ntype-drigg .retweet { height:13px; padding: 0 0 0 25px; font-size: 11px; font-weight: normal; background:url(http://designbump.com/sites/all/themes/designbumpv3/img/retweet.gif) no-repeat; color:#fff;}
+.node.ntype-drigg .retweet:hover {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/retweet.gif) no-repeat 0px -13px; color:#fff;}
+.node.ntype-drigg {background: url(http://designbump.com/sites/all/themes/designbumpv3/img/seperator.gif) no-repeat center bottom;}
+.node.ntype-drigg .karma_3_big, .node.ntype-drigg .karma_4_big { float: left; }
+.node.ntype-drigg .offset { margin-left: 79px; padding:7px 0 15px 0; }
+.node.ntype-drigg h2 { margin: 0; font-size:22px;}
+.node.ntype-drigg h2 a { color:#779fa0; font-weight: bold;}
+.node.ntype-drigg h2 a:hover { color:#598281;}
+.node.ntype-drigg a { color: #005a8e; }
+.node.ntype-drigg a:hover { text-decoration:none; }
+.node.ntype-drigg .story * { display: inline; }
+.node.ntype-drigg .story small a { color: #666; }
+.node.ntype-drigg .story p { margin: 0; }
+.node.ntype-drigg .baselink {color:#7a7a7a; font-size:10px; display:inline; margin-left: 2px; }
+.node.ntype-drigg .baselink a { color:#7a7a7a; font-weight: bold; text-decoration: underline;}
+/* Embedded content */
+.node.ntype-drigg .embedded-teaser div {float: right; margin: 0 20px; padding: 1px; border: 1px solid #bbb;}
+.node.ntype-drigg .embedded-teaser div img {display: block; margin: 0;}
+.node.ntype-drigg .embedded {margin-top: 1.5em;}
+/* Story data */
+#contentbase .node.ntype-drigg .storydata {margin: 0; position: relative;}
+#contentbase .node.ntype-drigg .storydata div.picture {position: absolute; left: -40px; height: 30px; width: 30px; overflow: hidden; margin-top: 1px; padding: 1px; border: 1px solid #ccc;}
+#contentbase .node.ntype-drigg .storydata div.picture a, .node.ntype-drigg .storydata div.picture img {display: block; height: 30px; width: 30px; background-color: #f3f9fc;}
+#contentbase .node.ntype-drigg .storydata div.picture:hover { border-color: #999; }
+#contentbase .node.ntype-drigg .storydata strong {color: #900; font-weight: normal;}
+#contentbase .node.ntype-drigg .storydata .links li { padding: 0 2px; }
+#contentbase .node.ntype-drigg .storydatafull {margin: 3px 0 0 40px; position: relative;}
+#contentbase .node.ntype-drigg .storydatafull div.picture {position: absolute; left: -40px; height: 30px; width: 30px; overflow: hidden; margin-top: 1px; padding: 1px; border: 1px solid #ccc;}
+#contentbase .node.ntype-drigg .storydatafull div.picture a, .node.ntype-drigg .storydatafull div.picture img {display: block; height: 30px; width: 30px; background-color: #f3f9fc;}
+#contentbase .node.ntype-drigg .storydatafull div.picture:hover { border-color: #999; }
+#contentbase .node.ntype-drigg .storydatafull strong {color: #900; font-weight: normal;}
+#contentbase .node.ntype-drigg .storydatafull .links li { padding: 0 2px; }
+.node .storydata {font-size: 8pt; color: #888;}
+.node.ntype-drigg .storydata a { color: #7a7a7a; font-weight:bold; text-decoration: underline; }
+.node.ntype-drigg .storydata a:hover {text-decoration: underline; }
+.node .storydatafull {font-size: 8pt; color: #888;}
+#content_center .node .storydatafull a { color: #666; }
+/* Links */
+.node div.links {display:inline; font-size: 8pt;}
+.node div.links a { color: #779fa0; }
+.node div.links .links li { padding: 0 5px 0 0; }
+.node div.links .links li.statistics_counter { color: #666; }
+.add_to_favorites a { padding: 0 0 0 18px;font-weight:bold; }
+.flag-abuse_node a {padding: 0 0 0 18px;font-weight:bold;}
+.flag-abuse_node {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/flag.gif) no-repeat;}
+.node div.links .links .in_favorites { color:#7a7a7a; padding: 0 2px 0 18px;font-weight:bold; background:url(http://designbump.com/sites/all/themes/designbumpv3/img/disk.gif) no-repeat; }
+.comment_add a { padding: 0 0 0 18px;font-weight:bold; }
+.forward_links a { padding: 0 0 0 23px; font-weight:bold; }
+.comment_add {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/comment.gif) no-repeat;}
+.comment_comments {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/comment.gif) no-repeat;}
+.comment_comments a { padding: 0 0 0 18px;font-weight:bold; }
+.forward_links {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/mail.gif) no-repeat;}
+.add_to_favorites {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/disk.gif) no-repeat;}
+.dbmore a { padding: 0 0 0 20px;font-weight:bold; }
+.dbmore {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/dbmore.gif) no-repeat;}
+.sharebuttons {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat -345px -325px; no-repeat; height:125px; margin:25px 0 0 0; padding: 0 0 0 290px;}
+.sharebuttons ul {margin:0; padding:0; list-style: none;}
+.sharebuttons ul li {display:inline; margin:0 0 0 23px;}
+/* Related links */
+.node-related {border-top: 1px solid #fff; background: url(http://designbump.com/sites/all/themes/designbumpv3/img/seperator.gif) no-repeat center top; margin-bottom: 25px;}
+.node-related h2 { font-size: 12pt; color:#7a7a7a; }
+.node-related dl dt { margin: 0.2em 0 0 0; }
+.node-related dl dt span { color: #666; }
+.node-related div.googleads_300x250 {float: left; padding: 0 20px 20px 20px; margin-right: 20px;}
+.node-related div.googleads_300x250 iframe {display: block; margin: 0;}
+/* Comments  */
+#comments {clear: both;}
+.comment {background-color:#f9f9f9; margin: 11px 0; padding: 13px;}
+#comments .admin {background-color:#666; margin: 11px 0; padding: 13px; color: #fff;}
+#comments .admin h3 a {color: #fff;}
+#comments .admin a { color: #fff;}
+.comment div.picture {float: left; margin: 0 17px 0 0; height: 64px; width: 64px; overflow: hidden; border: 1px solid #dcdedf;}
+.comment div.picture a, .comment div.picture img {display: block; height: 64px; width: 64px; margin-left: 0px;}
+.comment h3 {margin: 0;}
+.comment h3 a { color: #7a7a7a; font-size:17px;}
+.comment a { color: #779fa0;}
+.comment .links {text-align:right;}
+.comment .links a {font-size:11px; color:#ccc;}
+.comment .links a:hover {color:#666;}
+.comment p {margin:0px;}
+#comments .box h2 {font-weight:normal; font-size:24px;}
+#comments .form-required {color:#c23d50;}
+#comments .box {margin:30px 0 0 0; padding:10px 0 0 0; background: url(http://designbump.com/sites/all/themes/designbumpv3/img/seperator.gif) no-repeat center top;}
+.commentnumber {font-size:26px; padding: 0 0 15px 13px;}

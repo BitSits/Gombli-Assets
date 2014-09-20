@@ -1,0 +1,32 @@
+/*browser defaults reset*/
+ul { list-style:none; }
+dl,dt,dd,ul,ol,li,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input { margin:0; padding:0; }
+/*body {background:url(/design-images/tut_header-page-bk.jpg) repeat-x top;font-family:Arial, Helvetica, sans-serif;color:white;} */
+#tutorialFrame {height:142px;width:900px;margin-left:auto;margin-right:auto;background:url(/design-images/tutorial_headerframe_back.jpg) no-repeat;}
+
+#logo {width:253px; height:76px;padding-left:29px;float:left;}
+#ad {float:right;padding-right:50px;width:470px;padding-top:4px;}
+#trail {clear:both;padding-top:5px;}
+#trailleft {height:21px;float:left;font-size:0.75em;padding-left:54px;font-weight:bold;}
+#trail a {color:white;}
+#trail a:hover {color:yellow;}
+#trailright {float:right;font-size:0.65em;padding-right:60px;}
+
+#TutInfo {clear:both;font-size:0.90em;}
+#TutInfo .title {float:left;padding-top:14px}
+#TutInfo h1{padding:0;margin:0;color:#444;font-size:0.90em;padding-left:40px;font-weight:bold;}
+
+#toprightNav{margin:0;padding:0;float:right;width:500px;padding-top:15px;}
+
+#nav {margin:0;padding:0;color:#333;height:13px;float:left;width:490px;}
+#nav li {padding:0;margin:0;display:inline;float:left;color:#484848;font-size:.80em;}
+#nav li p{}
+
+#nav li a{color:#005AA7;}
+#nav li  a:hover{color:#76A904;}
+
+li.Tutrating span.rated {float:left;padding-right:5px;}
+
+#nav li.rate {padding-left:10px;}
+#nav  li.digg{border-left:1px dotted #8C8C8C;background:url(/design-images/links/digg.jpg) no-repeat left;padding-left:23px;height:14px;line-height:14px;margin-left:5px;padding-right:5px;display:inline;border-right:1px dotted #8C8C8C;}
+#nav  li.delicious{margin-left:5px;background:url(/design-images/links/delicious.jpg) no-repeat left;padding-left:23px; height:14px;line-height:14px;}

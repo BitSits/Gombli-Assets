@@ -1,0 +1,14 @@
+BG	= 1280 x 720
+
+Power UP
+Ground	= 60 x 60
+Pick 	= 60 x 60
+Drop	= 60 x 60
+Active	= 60 x 60 (90 x 90 for beanSeed)
+Die	= Active
+
+
+Tiles	= 80 x 60
+
+
+Gombli	= 120 x 120

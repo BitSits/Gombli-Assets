@@ -1,0 +1,687 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+
+<title>angry animator   » animation tutorial-2 : walk cycle</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="WordPress 2.6.3"> <!-- leave this for stats -->
+
+<link rel="stylesheet" href="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/style.css" type="text/css" media="screen">
+
+<link rel="SHORTCUT ICON" href="http://www.angryanimator.com/favicon.ico">
+
+
+
+<!--[if IE]><link rel="stylesheet" href="http://www.angryanimator.com/word/wp-content/themes/grey-matter/ie.css" type="text/css" media="screen" /><![endif]-->
+
+
+
+<link rel="pingback" href="http://www.angryanimator.com/word/xmlrpc.php">
+
+
+
+<link rel="alternate" type="application/rss+xml" title="angry animator RSS 2.0 Feed" href="http://www.angryanimator.com/word/feed/">
+
+
+
+<link rel="alternate" type="text/xml" title="angry animator RSS Feed" href="http://www.angryanimator.com/word/feed/rss/">
+
+
+
+<link rel="alternate" type="application/atom+xml" title="angry animator Atom 0.3" href="http://www.angryanimator.com/word/feed/atom/">
+
+
+
+<link rel="Shortcut Icon" href="http://www.angryanimator.com/word/wp-content/themes/grey-matter/img/favicon.ico" type="image/x-icon">
+
+
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.angryanimator.com/word/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.angryanimator.com/word/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 2.6.3">
+
+
+	<!-- Courtesy of Kimili Flash Embed - Version 1.4.3 -->
+	<script src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/swfobject.js" type="text/javascript"></script>
+
+
+</head><body>
+
+
+
+<div id="wrapper">
+
+
+
+<div id="header">
+
+
+
+
+
+<!-- Blog Description -->
+
+<div id="blackband_top_left">
+
+<h2>
+
+tutorials, rants, and words of wisdom</h2><!-- <div id="counters"> -->
+<!-- </div> --></div>
+
+
+
+
+
+<!-- Page Navigation -->
+
+<div id="blackband_top_right">
+
+<h2><ul>
+
+<li class="page_item"><a href="http://www.angryanimator.com/word" title="angry animator">home</a></li>
+
+<li class="page_item page-item-2"><a href="http://www.angryanimator.com/word/about/" title="about">about</a></li>
+<li class="page_item page-item-29"><a href="http://www.angryanimator.com/word/test/" title="tutorials">tutorials</a></li>
+</ul></h2>
+
+</div>
+
+
+
+
+
+<!-- Blog Title -->
+
+<div id="header_siteheader">
+
+<a href="http://www.angryanimator.com/word/feed/rss/" title="Subscribe to the Blog Feed" rel="nofollow"><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/rss_logo.gif" alt="Subscribe to the Blog Feed"></a>
+
+<h1><a href="http://www.angryanimator.com/word">angry animator</a></h1>
+
+</div>
+
+
+
+
+
+<!-- Header Sidebar -->
+
+<div id="header_sidebar">
+
+<!-- <div align="center"> -->
+
+
+
+<form method="get" id="searchform" action="http://www.angryanimator.com/word/">
+
+
+
+<!-- <input type="text" value="" name="s" id="s" size="20" /> -->
+
+<input value="Search" name="s" id="s" size="20" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" type="text">
+
+
+
+<input id="searchsubmit" value="Find" type="submit">
+
+
+
+</form>
+
+
+
+<!-- </div> --></div>
+
+
+
+</div>
+
+<!-- CONTENT -->
+
+
+
+  <div id="content">
+
+
+
+    
+
+  <h1>
+
+  animation tutorial-2 : walk cycle  </h1>
+
+
+
+  Posted by dermot on November 1, 2008 at 12:07 am
+
+  <p>
+</p><div id="so_targ_wlk03_953633344" class="flashmovie"><embed type="application/x-shockwave-flash" src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk03.swf" id="fm_wlk03_953633344" name="fm_wlk03_953633344" quality="high" width="580" height="300"></div>
+
+<script type="text/javascript">
+	// <![CDATA[
+
+	var so_953633344 = new SWFObject("http://www.angryanimator.com/tut/pic/002_walkcycle/wlk03.swf","fm_wlk03_953633344","580","300","6","","","","","");
+	so_953633344.write("so_targ_wlk03_953633344");
+
+	// ]]>
+</script>
+
+<p>
+</p><p>
+Most sane people have a fear of animating walk cycles. Many events are
+happening at the same time, and it can seem overwhelming. A single
+mistake on your first drawing can wreck the rest of the scene. However,
+the process can be broken down into a series of steps which can go some
+distance in simplifying the process.</p>
+<p>A walk cycle can be described by four distinct poses:</p>
+<p><strong>CONTACT, RECOIL, PASSING</strong> and <strong>HIGH-POINT.</strong></p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk01.gif" alt="" width="580" height="190"></p>
+<p>These four poses and a handful of inbetween drawings constitute a
+walk cycle. The single most important frame of the four is the contact
+pose. Once you draw it you have already determined 80% of the rest of
+your walk. If you make a mistake on your contact pose, it can be very
+difficult to correct later on. Therefore: pay close attention now and
+save yourself a world of pain.</p>
+<p>Here is the contact pose in front and side view.</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk02.gif" alt="" width="580" height="435">Look
+at the pose carefully. You will notice some very important details: The
+feet are at their furthest extension in the walk. That is their most
+extreme position in the cycle. That alone makes this the most critical
+pose in the sequence. You can plan an entire walk sequence just by
+laying out all the contact poses as they work into one another.</p>
+<p><strong>Some animators think that the recoil and high points are the
+most important poses because the head is at its highest and lowest
+positions. This is wrong. The contact pose is the fundamental building
+block of a walk cycle. If you do not start your cycle with this pose,
+then you are doomed. It’s as simple as that.</strong></p>
+<p>When the right foot is forward, the right arm is back, and vice
+versa. This is called “counterpose”. This is how nature keeps
+everything in balance when you move: one side of the body “opposes” the
+other. Good animation has these “opposing actions” all the time. If
+animation seems weak or unnatural to you, it is frequently because it
+lack opposing action. You can think of a walk as a series of “falls”.
+The character propels himself forward by leaning into the walk as he
+moves forward. His trailing foot constantly swings forward to catch
+himself before he moves on to the next “fall” in the sequence. It
+shares many attributes with the bouncing ball in tutorial 1. Look at
+the front on view.</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk03.gif" alt="" width="580" height="435"></p>
+<p>I have drawn in imaginary cylinders to illustrate the orientation of
+the shoulders and hips. Again, as one is thrust forward, the other is
+thrust back. As one tilts up, the other tilts down.<br>
+Another name for this is “Torque”. It is a fundamental principle of
+good posing. It should be an element of almost every figure drawing
+that you do. Michelangelo always used torque in his sculptures,
+creating dynamic poses, even in ones that were standing still. One hip
+takes the weight, while the other passively provides the balance.<br>
+The body is very rarely symmetrical: indeed, symmetry can be your enemy.</p>
+<p>Now look at the recoil pose, the second main pose in the cycle.</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk04.gif" alt="" width="580" height="435"></p>
+<p>This is the frame where the character impacts the ground. It is also
+the lowest point in the cycle. The characters arms are furthest from
+the body as a result of the force of hitting the ground. The front foot
+is fully in contact with the ground; the rear foot has just lifted up
+from it.<br>
+Note that the leading foot is directly beneath the body, supporting the
+weight above it. Too many beginners produce recoil poses where the foot
+is not beneath the body, but several inches ahead of it. Try to avoid
+this.</p>
+<p>To keep things simple, let’s skip the passing pose…it’s closer to being an inbetween. Let’s look at the high point.</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk05.gif" alt="" width="580" height="435"></p>
+<p>This is the highest point in the cycle. The character’s body is
+stretched to the maximum as he lifts his leading leg forward to reach
+the next contact position. The heel of the trailing foot is just
+beginning to leave the ground.</p>
+<p>Those are the three most important poses to remember when creating a
+walk animation. If you can wrap your head around them, you will have a
+much better chance of completing a satisfactory walk cycle.</p>
+<p>There are two basic ways to animate a walk cycle. You can animate
+the cycle “in place” or across the screen. Here is the same scene shown
+in each style.</p>
+<div id="so_targ_wlk03_940152736" class="flashmovie"><embed type="application/x-shockwave-flash" src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk03.swf" id="fm_wlk03_940152736" name="fm_wlk03_940152736" quality="high" width="580" height="300"></div>
+
+<script type="text/javascript">
+	// <![CDATA[
+
+	var so_940152736 = new SWFObject("http://www.angryanimator.com/tut/pic/002_walkcycle/wlk03.swf","fm_wlk03_940152736","580","300","6","","","","","");
+	so_940152736.write("so_targ_wlk03_940152736");
+
+	// ]]>
+</script>
+
+<p>
+</p><div id="so_targ_wlk01_479535680" class="flashmovie"><embed type="application/x-shockwave-flash" src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk01.swf" id="fm_wlk01_479535680" name="fm_wlk01_479535680" quality="high" width="580" height="300"></div>
+
+<script type="text/javascript">
+	// <![CDATA[
+
+	var so_479535680 = new SWFObject("http://www.angryanimator.com/tut/pic/002_walkcycle/wlk01.swf","fm_wlk01_479535680","580","300","6","","","","","");
+	so_479535680.write("so_targ_wlk01_479535680");
+
+	// ]]>
+</script>
+
+<p>
+</p><p>Why animate in place? There is one main advantage:</p>
+<p>You only have to draw a single stepping cycle, then you can reposition it across the screen, saving time and paper.</p>
+<p>The main disadvantages of animating in place:<br>
+1.It can be confusing.<br>
+2.The “arcs” on the character can look weird when the character is moved across the screen.<br>
+3.It can be difficult to match the character properly to the background, if he has to register to something on it.</p>
+<p>I am going to show you how to animate a character walking across the
+page. Once you feel comfortable with that, an in-place walk cycle
+should be slightly less intimidating.</p>
+<p>Let’s begin.</p>
+<p>Look at this image:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk08.gif" alt="" width="580" height="435"><br>
+This shows the keyframes of a walk cycle moving across the screen. The
+most important pose is the contact pose. Use this image as an overall
+guide to your scene.</p>
+<p><strong>1.Guideline.</strong><br>
+On a clean sheet of paper, draw two parallel horizontal lines moving across the bottom of the page.</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk09.gif" alt="" width="580" height="435"><br>
+These are the lines that the feet will follow as they walk across the
+page. Without these lines to guide you, your character can drift either
+too high or too low on the page.</p>
+<p><strong>2.Draw the first contact pose.</strong><br>
+Put a clean sheet of paper down over the guideline drawing. You are going to draw the first contact drawing.</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk10.gif" alt="" width="580" height="435"><br>
+Position the heel of the right foot on the lower line; position the
+toes of the left foot on the upper line. Name this drawing #1, and
+since it is a contact pose I usually write the letter “c” in the top
+right of the page, above and away from the frame number. (This is a
+habit of mine, I don’t know if anyone else does it….you will find that
+it helps to reduce confusion when you have 12 drawings flying all over
+your drawing board.) Don’t forget to circle the drawing number, since
+it is a key.</p>
+<p><strong>3. Draw the second contact pose, drawing 7.</strong><br>
+If you have a backlight then switch it on. Put down a clean sheet.
+Number it #7. Circle the number, as this is a key frame. Write the
+letter “C” above the frame number, to remind you that it’s a contact
+pose.</p>
+<p>Note that the second contact pose occurs about half a second after
+the first. Here’s how you position the second contact relative to the
+first: The leading foot on #1 will be the trailing foot on #7. In this
+case the right foot is about to contact the ground on #1. In frames #1
+through #7 it is going to hit the ground and more or less stay there.
+By frame #7 it will have begun to lift off the ground. Look at the
+picture below to see how #1 works into #7:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk11.gif" alt="" width="580" height="435"><br>
+The right foot (the leading one) has touched the ground and the entire
+body has moved forward. The left foot (the far one) has now swung
+forward and is now about to contact the ground.<br>
+Lightly sketch it in, keeping the overall attitude as similar to #1 as
+possible. The only differences will be the arms, legs and orientation
+of the hips, all of which will be reversals of #1.<br>
+After you have roughly sketched in the second contact pose, you’ll have
+to check it against the first. Lift #7 off the pegs, and position it
+over #1. Flip #1 against #7 to see that both drawings have the same
+volume and attitude. You don’t want either to look bigger or smaller
+than the other. Also, both should be leaning forward into the walk at
+the same angle. If not, your walk will look more like a limp.</p>
+<p>Now that you have drawn these two poses, you can begin to block in
+the main keys between them. First, an overview of what is going to
+happen.</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk13.gif" alt="" width="580" height="435"></p>
+<p>Here are the main keys. The contact, recoil and high point drawings.
+Remember these positions when you begin to draw them in on their own
+sheets of paper. If you were to positon #2 too high for example, it
+would make #5 very difficult to draw properly: the overall action would
+be too “tight”…not enough bounce in the walk.</p>
+<p>This would feel like a very stiff cycle, unnatural for a cartoony character. See what I mean below:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk14.gif" alt="" width="580" height="435"></p>
+<p>The opposite is also dangerous: moving the recoil too far down can
+result in a wildly exagerrated action, too unbelievable for all but the
+weirdest characters:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk15.gif" alt="" width="580" height="435"></p>
+<p>Just bear in mind that after the first contact, the character works
+down into the recoil, then up into the high point, then back into the
+next contact where the pattern is repeated:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk16.gif" alt="" width="580" height="435"></p>
+<p><strong>4. Draw the recoil pose</strong><br>
+(Bear in mind my rant in the previous paragraph). Put down a clean
+sheet, number it #2 in the top right of the page, write the letter “R”
+beside that, and draw the character as his foot hits the ground. The
+character will be at his lowest point in the cycle. Don’t move the head
+and body too far forward or you can inadvertently cause any number of
+arcing problems later on.</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk17.gif" alt="" width="580" height="435"></p>
+<p>I find as a general rule of thumb that the body should fall by half
+a head to one head in height to keep the walk “bouncy” enough. (It’s a
+common beginner’s mistake to keep the figure at the same height
+throughout the entire walk.)</p>
+<p>Remember…the recoil position will be almost identical later in the walk, on the subsequent step:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk18.gif" alt="" width="580" height="435"></p>
+<p>This is what will determine the overall arc pattern, and the
+positions of all the poses inbetween the recoil and the following
+contact pose. On the recoil pose the character impacts the ground. The
+rear foot lifts off, and the arms are extended to their maximum from
+the body because of the force of hitting the ground.</p>
+<p>Now a brief note on the overall timing of a walk.</p>
+<p>The most general type of walk cycle is completed over the course of
+one second. This means that the character makes a single step every
+half second. This is known as hitting beats, and luckily two beats a
+second is a typical musical pattern, or so I’m told. We’re animating
+this scene on the typical 12 frames per second, therefore the overall
+sequence of drawings so far will look like this:</p>
+<p>#01:contact<br>
+#02:recoil<br>
+#03:<br>
+#04:<br>
+#05:<br>
+#06:<br>
+#07:contact (much like #1, but for the reversal of the legs and arms).<br>
+#08:recoil<br>
+#09:<br>
+#10:<br>
+#11:<br>
+#12:<br>
+#13:contact ( a duplicate of #1, only further to the right).</p>
+<p>As you can see, a complete cycle works from #01 to #12, beginning
+its repeat on#13. I put the recoil immediately following the contact
+without an inbetween between them because an inbetween frame would make
+it look “mushy”. The contact should usually snap into the recoil
+immediately, without an intervening drawing.</p>
+<p>I have not named the frame that the high point will go on. I could
+assign it as #4 #05 or #06. A different frame number will make quite a
+difference to the properties of the character. Here is why:</p>
+<p>If #04 is the high point the walk will look like this:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk19.gif" alt="" width="580" height="435"></p>
+<p>As you can see above, this makes the character “bounce off the ground very quickly, making him light footed.</p>
+<p>If #06 is the high point the walk will look like this:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk20.gif" alt="" width="580" height="435"></p>
+<p>This timing above slows down the character as he rises from the recoil pose, making him seem a lot heavier.</p>
+<p>I will take the middle path and name the high point #05, resulting in this:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk21.gif" alt="" width="580" height="435"><br>
+This is a more even timing: it should make the character seem like an
+average weight, without any extreme attributes. These are the kinds of
+decisions that you should make before you begin animating. Now we can
+look at our overall exposure sequence again:</p>
+<p>#01:contact<br>
+#02:recoil<br>
+#03:<br>
+#04:<br>
+#05:high point.<br>
+#06:<br>
+#07:contact (much like #1, but for the reversal of the legs and arms).<br>
+#08:recoil (like #02, arms and legs reversed).<br>
+#09:<br>
+#10:<br>
+#11:high point. (like #05, arms and legs reversed).<br>
+#12:<br>
+#13:contact ( a duplicate of #1, only further to the right).</p>
+<p>Now we have our 3 main key frames, #1 #2 and #5, and their near
+twins #7 #8 and #11. The empty spaces in the sequence above will all be
+inbetweens. Don’t worry about them yet.<br>
+For now we will focus on #1 thru # 07, finishing a single step.</p>
+<p><strong>5. Draw the high point.</strong><br>
+Put down a clean sheet. As explained above, this will be drawing number
+#5. Write the number in the top right of the page. Circle it. Write a
+small letter “H” above the number. Now begin the drawing:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk22.gif" alt="" width="580" height="435"></p>
+<p>You have a little more freedom when drawing the limbs on the high
+point than on the recoil, as the leading foot is up in the air, and the
+arms are swinging over a pretty wide space. That gives you a number of
+different possibilities. The example frame that I have included is
+fairly typical.</p>
+<p>The most important thing to get right with this drawing is the arc
+path of the head and body. A mistake on this one frame will effect all
+the inbetween frames around it.</p>
+<p>Once that is finished, you are ready to move on.</p>
+<p><strong>6.Add the timing charts.</strong></p>
+<p>Before you do anything else, you should add the timing charts to
+describe the correct positions of the inbetweens. Here are the drawings
+we have finished so far:</p>
+<p>#01:contact<br>
+#02:recoil<br>
+#03:<br>
+#04:<br>
+#05:high point.<br>
+#07:contact (much like #1, but for the reversal of the legs and arms).</p>
+<p>Timing charts need to be added to #2 and #5. The timing chart on #2
+will describe the positions of #3 and #4 as they work into #5. The
+chart on #5 will describe the position of #6.</p>
+<p>Put #2 on the drawing board. Underneath the frame number in the top
+right corner of the page, you will add the chart. Here’s what it should
+look like:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk23.gif" alt="" width="580" height="435"></p>
+<p>As you can see, #4 is the main inbetween halfway between the two
+keyframes. #3 is a smaller inbetween which will completely smooth out
+the motion.</p>
+<p>The next timing chart to be added is on #5. Put #5 on the drawing
+board and write a timing chart beneath the drawing number in the top
+right corner of the page. It should look like this:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk24.gif" alt="" width="580" height="435"></p>
+<p>This shows that #6 will be a single inbetween halfway between #5 and #7. Now it’s time to draw the inbetweens.</p>
+<p><strong>7.Draw #4: the main inbetween.</strong></p>
+<p>Be sure that you have the guideline drawing on the drawing board.Put
+#2 on the pegs. Now put #5 above that. Put a clean sheet on top of all
+three. Switch on the backlight. Now you must draw #4, also known as the
+“passing position”. Some treat it as a key also, but to simplify
+things, I’m treating it as an inbetween. I’ve never really found it to
+be as critical as contact, recoil or high point poses.</p>
+<p>You have to flip between #4 and the two key frames beneath it. You should remember that from the bouncing ball tutorial:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/flip1.gif" alt="" width="138" height="104"></p>
+<p>Again, be sure that your character follows the arc path as he walks.
+When you’re finished the drawing, remove the drawings from the pegs and
+place #2, #4 and #5 back on the pegs in that sequence. Now you can roll
+them to see if they move properly. You’ll also remember that from the
+bouncing ball tutorial.</p>
+<p><a href="http://www.angryanimator.com/tut/pic/001_bouncingball/flip1.gif"><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/roll1.htm" alt=""></a>If
+you see any errors in your inbetween, then you must lift the drawings
+off the pegs again, then place #2 on the bottom, #5 above it, and #4 on
+the top. Then you can flip again, correcting any errors that may have
+crept in. It’s tedious, but it’s the only way to do it.</p>
+<p><strong>8.Draw the remaining inbetweens.</strong></p>
+<p>Repeat step 7 with #3 and #6. If you do them right then you should
+be finished with the first half of the walk cycle. I hope you had fun,
+but I doubt it.</p>
+<p>You should be looking at a stack of paper, numbered #1 through #7.
+If you put all those drawings on the pegs, you should be able to roll
+them and have a rough idea of what your scene will look like when it’s
+shot. If anything catches your eye, chances are it’s wrong. Go back in,
+repeating the process described in step 7, until you’re happy with it.</p>
+<p><strong>9.Finish the rest of the cycle (or else).</strong></p>
+<p>Repeat the steps above to complete the rest of the walk cycle.
+You’ll have to draw #13 (the third contact pose) to work into. Simply
+trace off the pose on #1 onto #13 in its new position, further to the
+right. If it took 2 inches to make a single step from #1 to#7, then
+slide #13 over 4 inches to the left and start tracing…</p>
+<p>I hope that makes sense.</p>
+<p>The second half of the walk is identical to the first, except that the arms and legs will be on the opposite sides of the body.</p>
+<p>Indeed, you can refer to the first half of your scene to help you
+with the second. The recoil pose on #8 should be as similar to the
+recoil pose on #2 as possible, otherwise the walk may seem uneven, or
+even more like a limp.</p>
+<p><strong>10. A general note about arcs.</strong></p>
+<p>Every joint of the body has its own arc path. It’s a good idea to check them all. Here’s how.</p>
+<p>Place all your drawings on the board. If you have a backlight switch
+it on. Pick a body part, e.g. the right wrist. Place a clean sheet over
+the drawings and draw a small dot on it at the position of the right
+wrist on frame 1. On the same sheet draw a dot for the position fof the
+wrist for #2…and so on.</p>
+<p>By the time you’re finished you’ll have a sheet of paper that looks like this:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk25.gif" alt="" width="580" height="180"></p>
+<p>That’s what it looks like if it’s done properly. If you’ve made an arc mistake, it’ll look like this:</p>
+<p><img src="angry%20animator%20%C2%BB%20animation%20tutorial-2%20%20%20walk%20cycle_files/wlk26.gif" alt="" width="580" height="180">If
+your walk is to look smooth and natural, your arc paths must also be
+smooth, curved, natural shapes. You should repeat this process for
+every part of the body to make sure they all move properly.</p>
+<p>If you’re new to this: draw simple cartoony characters at first.
+Don’t even think of attempting anatomical designs until you’ve gotten
+comfortable with the simple ones first.<br>
+That’s all for now!</p>
+
+
+  
+
+<div id="postmeta">
+
+
+
+   •&nbsp;Tags:&nbsp;<a href="http://www.angryanimator.com/word/tag/animation/" rel="tag">animation</a>, <a href="http://www.angryanimator.com/word/tag/tutorial/" rel="tag">tutorial</a>, <a href="http://www.angryanimator.com/word/tag/walk-cycle/" rel="tag">walk cycle</a> •&nbsp;Posted&nbsp;in:&nbsp;<a href="http://www.angryanimator.com/word/category/tutorial/" title="View all posts in tutorial" rel="category tag">tutorial</a>
+
+  
+
+</div>
+
+
+
+  
+
+<!-- You can start editing here. -->
+
+
+
+<div id="comments">
+
+
+
+ 
+
+
+
+
+
+<div id="comment-form">
+
+
+
+<h1>Leave a Reply</h1>
+
+<p>You must be <a href="http://www.angryanimator.com/word/wp-login.php?redirect_to=http%3A%2F%2Fwww.angryanimator.com%2Fword%2F2008%2F11%2F01%2Fanimation-tutorial-2-walk-cycle%2F">logged in</a> to post a comment.</p>
+
+
+
+</div>
+
+
+
+</div>
+
+  
+
+  
+
+</div>
+
+
+
+  <div id="sidebar">
+
+
+
+  <ul>
+
+  	<li id="pages" class="widget widget_pages">		<h2 class="widgettitle">Pages</h2>		<ul>
+			<li class="page_item page-item-2"><a href="http://www.angryanimator.com/word/about/" title="about">about</a></li>
+<li class="page_item page-item-29"><a href="http://www.angryanimator.com/word/test/" title="tutorials">tutorials</a></li>
+		</ul>
+	</li><li id="archives" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>		<ul>
+			<li><a href="http://www.angryanimator.com/word/2008/11/" title="November 2008">November 2008</a></li>
+	<li><a href="http://www.angryanimator.com/word/2008/10/" title="October 2008">October 2008</a></li>
+		</ul>
+</li>		<li id="meta" class="widget widget_meta">			<h2 class="widgettitle">Meta</h2>			<ul>
+			<li><a href="http://www.angryanimator.com/word/wp-login.php?action=register">Register</a></li>			<li><a href="http://www.angryanimator.com/word/wp-login.php">Log in</a></li>
+			<li><a href="http://www.angryanimator.com/word/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.angryanimator.com/word/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+		</li>		<li id="recent-posts" class="widget widget_recent_entries">			<h2 class="widgettitle">Recent Posts</h2>			<ul>
+						<li><a href="http://www.angryanimator.com/word/2008/11/04/animation-tutorial-4-flash-walk-cycle/">animation tutorial-4: flash walk cycle </a></li>
+						<li><a href="http://www.angryanimator.com/word/2008/11/01/hello-everyone/">hello everyone… </a></li>
+						<li><a href="http://www.angryanimator.com/word/2008/11/01/animation-tutorial-3-dialog/">animation tutorial-3 : dialog </a></li>
+						<li><a href="http://www.angryanimator.com/word/2008/11/01/animation-tutorial-2-walk-cycle/">animation tutorial-2 : walk cycle </a></li>
+						<li><a href="http://www.angryanimator.com/word/2008/10/31/animation-tutorial1-bouncing-ball/">animation tutorial-1 : bouncing ball </a></li>
+						</ul>
+		</li><li id="linkcat-2" class="widget widget_links"><h2 class="widgettitle">Blogroll</h2>
+	<ul class="xoxo blogroll">
+<li><a href="http://www.animationmeat.com/" title="a great site run by industry veterans">animation meat</a></li>
+<li><a href="http://blackmocco.blogspot.com/2007/12/blog-post.html" title="personal blog of animator mick cassidy">blackmocco</a></li>
+<li><a href="http://coldhardflash.com/" title="the best site dedicated to flash animation ">cold hard flash</a></li>
+<li><a href="http://johnkstuff.blogspot.com/" title="crazy, opinionated, and sometimes very useful.">john k.</a></li>
+<li><a href="http://madcartoonist.blogspot.com/" title="nancy beiman’s personal blog.">mad cartoonist</a></li>
+<li><a href="http://mymedicatedlife.blogspot.com/" title="the blog of a depressed animator. is there any other kind?">my medicated cartoon life</a></li>
+<li><a href="http://www.thepenciltest.com/" title="personal blog of animator richard smitheman">the pencil test</a></li>
+
+	</ul>
+</li>
+  <!--  <li><h2>Some ads here</h2>
+  <ul> -->
+
+
+
+<!--   ---------------------- LINK ADS ---------------------- -->
+
+
+
+
+
+<!-- / ---------------------- LINK ADS ---------------------- -->
+
+
+
+<!--  </ul>
+</li> -->  </ul>
+
+
+
+</div>
+
+<!-- /CONTENT -->
+
+
+
+<div id="footer">
+
+ <div id="footer_content">
+
+    
+
+  <br>
+
+
+
+  <ul class="postnav">
+
+  <li class="left"></li>
+
+  <li class="right"><a href="http://www.angryanimator.com/word/2008/11/01/animation-tutorial-2-walk-cycle/">Next post »</a></li>
+
+  </ul>  
+
+  
+
+     </div>
+
+
+
+<!-- FOOTER -->
+
+
+
+<div id="blackband_bottom_left">© <a href="http://www.angryanimator.com/word">
+
+angry animator</a>.
+
+</div>
+
+
+
+<div id="blackband_bottom_right">Powered by <a href="http://wordpress.org/" title="wordpress.org">WordPress<!-- 2.6.3 --></a>, styled by <a href="http://masnikov.com/grey_matter">Grey Matter</a>.</div>
+
+
+
+<!-- AdSense Manager v3.2.13 (0.546 seconds.) -->
+
+</div>
+
+</div>
+
+<!-- Dynamic Page Served (once) in 0.559 seconds -->
+<!-- super cache --></body></html>

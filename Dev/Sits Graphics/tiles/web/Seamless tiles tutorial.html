@@ -1,0 +1,238 @@
+<html><head>
+
+<title>Creating Seamless Tiles</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head><body onload="" alink="#00cccc" bgcolor="#000000" text="#9999cc" vlink="#003333" link="#006666">
+<table align="left" border="0" width="82%" height="2912">
+  <tbody><tr> 
+    <td colspan="3" height="21"> 
+      <p><b><font color="#b67805">| </font><b><a href="http://pixelpoke.com/index.html"><font color="#006666" size="1" face="Verdana, Arial, Helvetica, sans-serif">home</font></a></b><font color="#b67805"> |<font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+        </font></font><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b><a href="http://pixelpoke.com/Who.html"><font color="#006666">who</font></a></b></font><a href="http://www.pixelpoke.com/Tutorial%20One/Who.html"><font color="#006666"> 
+        </font></a><font color="#b67805">|<font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+        </font></font><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b><a href="http://pixelpoke.com/Links.html"><font color="#006666">links</font></a></b></font><font color="#b67805"> | <a href="http://pixelpoke.com/FREE%20PIXELS_backgrounds.html"><font color="#006666"><b><font size="1" face="Verdana, Arial, Helvetica, sans-serif">backgrounds</font></b></font></a><font color="#b67805"> | </font> <b><a href="http://pixelpoke.com/FREE%20PIXELS.html"><font color="#006666" size="1" face="Verdana, Arial, Helvetica, sans-serif">free 
+        stuff </font></a></b><font color="#b67805"> | <b><a href="http://pixelpoke.com/FREE%20PIXELS_textures.html"><font color="#006666" size="1" face="Verdana, Arial, Helvetica, sans-serif">ornaments</font></a></b><font color="#b67805"> <font color="#b67805">| <b><a href="mailto:jwaske@speakeasy.net"><font color="#006666" size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+        email</font></a> </b>|</font></font></font></font><font face="Arial"> 
+        </font></b></p>
+      <font color="#b67805"><font color="#b67805"><font color="#b67805"><font color="#b67805"><font color="#b67805"><font color="#b67805"><font color="#b67805"><a name="Top"></a></font></font></font></font></font></font></font></td>
+  </tr>
+  <tr> 
+    <td colspan="3" height="68"> 
+      <h1><b><font face="Verdana, Arial, Helvetica, sans-serif">Seamless tile 
+        tutorial -Photoshop </font></b></h1>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="3" height="327"> 
+      <p>&nbsp;</p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">There are quite a 
+        few tutorials out on the web that will teach you how to create a seamlessly 
+        tiling image. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">This tutorial, like 
+        most others, will teach you how to use the <b>Filter &gt;&gt; Offset</b> 
+        feature to identify and remove seams from a tile. I also cover a couple 
+        of methods for setting up your workflow, and testing your image before 
+        you throw it to the web or on a 3D model. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">If you're serious 
+        about web art creation, including color theory, image compression, and 
+        best practices, check out <b>Lynda Weinman</b> and <b>Bruce Heavin</b>'s 
+        great book, <b><i><font size="4">&lt;coloring web graphics.2&gt;</font></i></b>, 
+        published by New Riders Publishing. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Lynda has a site on 
+        the web: <b><a href="http://www.lynda.com/">lynda.com</a></b>, which is 
+        well worth checking out.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">The images from this 
+        section are from the Macintosh version of Photoshop 5.5, but the methods 
+        used here will work on all versions of Photoshop 4.0 and on Windows as 
+        well as Macs.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">A note about images: 
+        this tutorial uses a continuous toned image, like a photograph, but the 
+        same principles apply if you are using images like colored line art or 
+        logos. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Also worth considering: 
+        I gave a speech on best practices for creating tiling textures at the 
+        <b>2000 Game Developers Conference</b> in San Jose, and you can read the 
+        white paper for that talk <a href="http://www.pixelpoke.com/gdc/GDC">here</a>. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">The images in the 
+        paper deal mainly with landscape textures for <i>Flight Simulator 2000</i>, 
+        but again, the same principles apply.</font></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" height="184"> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Let's create a tile 
+        from scratch!</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">We start by creating 
+        two new images: one that will tile, and one that we will use to check 
+        the work. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Although a self-tiling 
+        image can be non-square, it is much harder to accurately proof. I also 
+        always start with an image size based on a power of 2 (i.e. 2 X 2 X 2 
+        X 2 = 16). Why? There are two main reasons, the first being that many 
+        of Photoshop's filters (most notably Clouds) will create already seamless 
+        tiles, but only if the original image is based on a power of 2. Secondly, 
+        powers of two are easy to manage and check. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Heck, even your monitor 
+        resolution is based on a power of two.</font></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </td>
+    <td width="7%" height="184"><a href="#Top"><img src="Seamless%20tiles%20tutorial_files/topcat.gif" align="bottom" border="0" width="32" height="32"></a></td>
+  </tr>
+  <tr> 
+    <td width="50%" height="378"> 
+      <h2><b><font face="Verdana, Arial, Helvetica, sans-serif">Step One: Getting 
+        Set Up</font><font face="Helvetica"> </font></b></h2>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif">Go to File &gt;&gt; 
+        New</font></b></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">This will be our tile. 
+        Under image size, type in your image dimensions. Make sure that you're 
+        using pixels as a unit of measurement, and that your image resolution 
+        is 72 dpi.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">For checking the pattern, 
+        create another image, using all of the same settings except for size. 
+        Input a file size that is some multiple of your tile. For example, a tile 
+        that is 128 by 128 pixels might have a "checking" file of 768 by 768 pixels. 
+        This will repeat the tile six times across and six times down, and will 
+        give you a good idea of what the resulting pattern will look like. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Now let's get tricky.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b>Go to File &gt;&gt; 
+        Preferences</b></font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b>Choose Guides and 
+        Grid</b></font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Set up your guides 
+        to show you where the edges of your tile are when repeated in on our checking 
+        file. Taking our 128 by 128 pixel example, we would set up a gridline 
+        every 128 pixels, and maybe a subdivision of 2, to show where the center 
+        of the tile is. Choose a style and a color that you are comfortable with.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">To view your guides 
+        (or turn them off), choose <b>View &gt;&gt; Show Grid</b></font></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </td>
+    <td width="43%" height="378"><img src="Seamless%20tiles%20tutorial_files/new%2520file.jpg" width="350" height="371"></td>
+    <td width="7%" height="378"><a href="#Top"><img src="Seamless%20tiles%20tutorial_files/topcat.gif" align="bottom" border="0" width="32" height="32"></a></td>
+  </tr>
+  <tr> 
+    <td width="50%" height="336"> 
+      <h2><font face="Verdana, Arial, Helvetica, sans-serif">Step Two: The Tile</font></h2>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">I started by picking 
+        a base color, and then going to</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"> <b>Edit &gt;&gt; 
+        Fill</b>, choosing the foreground color.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">I then reset my colors 
+        to the default of black and white (select "D" on the keyboard), and chose 
+        <b>Filter &gt;&gt; Render &gt;&gt; Clouds</b>, which renders a fractal 
+        image using the foreground and background colors on top of whatever color 
+        may already be present.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">To give the tile some 
+        interest, I then chose <b>Filter &gt;&gt; Texture &gt;&gt; Texturizer</b> 
+        and chose the preset of Sandstone, playing with the settings there.</font></p>
+      <p>&nbsp;</p>
+    </td>
+    <td width="43%" height="336"> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b><img src="Seamless%20tiles%20tutorial_files/new%2520color.jpg" width="190" height="300"></b></font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b>Edit &gt;&gt; Fill</b></font></p>
+    </td>
+    <td width="7%" height="336"><a href="#Top"><img src="Seamless%20tiles%20tutorial_files/topcat.gif" align="bottom" border="0" width="32" height="32"></a></td>
+  </tr>
+  <tr> 
+    <td width="50%" height="341"> 
+      <p><img src="Seamless%20tiles%20tutorial_files/CLOUDS.jpg" width="250" height="257"></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b>Filter &gt;&gt; 
+        Render &gt;&gt; Clouds</b></font></p>
+    </td>
+    <td width="43%" height="341"> 
+      <p><img src="Seamless%20tiles%20tutorial_files/texture%2520render.jpg" width="250" height="257"></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b>Filter &gt;&gt; 
+        Texture &gt;&gt; Texturizer</b></font></p>
+    </td>
+    <td width="7%" height="341"><a href="#Top"><img src="Seamless%20tiles%20tutorial_files/topcat.gif" align="bottom" border="0" width="32" height="32"></a></td>
+  </tr>
+  <tr> 
+    <td width="50%" height="291"> 
+      <h2><font face="Verdana, Arial, Helvetica, sans-serif">Step Three: Getting 
+        it Seamless</font></h2>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">First I duplicate 
+        the layer I'm working on:</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">(<b>Layer &gt;&gt; 
+        Duplicate Layer</b>)</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Then I choose <b>Filter 
+        &gt;&gt; Other &gt;&gt; Offset</b>, choosing offset values 50% of my texture's 
+        dimensions (in this case 256 X 256). I also make sure that "wrap around" 
+        is selected.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">At this point it's 
+        now easy to edit out any seams that are visible, by erasing to the image 
+        below. You can also use the rubberstamp tool to paint back in areas. As 
+        you can see from the example image, I create a very rough cross shape, 
+        trying not to make the cross shape too obvious. This helps eliminate those 
+        annoying horizontal and vertical lines that you will see in many patterns 
+        across the web.</font></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </td>
+    <td width="43%" height="291"> 
+      <p><img src="Seamless%20tiles%20tutorial_files/offset.jpg" width="250" height="158"></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"> <b>Filter &gt;&gt; 
+        Other &gt;&gt; Offset</b></font></p>
+    </td>
+    <td width="7%" height="291"><a href="#Top"><img src="Seamless%20tiles%20tutorial_files/topcat.gif" align="bottom" border="0" width="32" height="32"></a></td>
+  </tr>
+  <tr> 
+    <td width="50%" height="248"> 
+      <p><img src="Seamless%20tiles%20tutorial_files/transparent.jpg" width="250" height="257"></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">A very rough cross 
+        shape</font></p>
+    </td>
+    <td width="43%" height="248"> 
+      <h2><font face="Verdana, Arial, Helvetica, sans-serif">Step Four: Check 
+        Your Work</font></h2>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Now let's make this 
+        baby sing!</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">To have Photoshop 
+        make a pattern, first go to <b>Select &gt;&gt; Select All</b>. With everything 
+        selected (it doesn't matter what layer is active, only what's visible), 
+        go to <b>Edit &gt;&gt; Define Pattern</b>.</font></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </td>
+    <td width="7%" height="248"><a href="#Top"><img src="Seamless%20tiles%20tutorial_files/topcat.gif" align="bottom" border="0" width="32" height="32"></a></td>
+  </tr>
+  <tr> 
+    <td width="50%" height="341"> 
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Now let's switch to 
+        our checking document. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Choose <b>Edit &gt;&gt; 
+        Fill</b>. <b>Select the "Fill with pattern " option</b>. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Voila! Your image 
+        is tiled. Turn your grid on to see where your edges are. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">Now at this point 
+        I generally go back and work on the tile image until I've reduced as much 
+        of the obvious patterning as possible. If you are finished at this point, 
+        flatten your image (<b>choose Layer options, and select flatten</b>) and 
+        save it as your file of choice.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif">You're done! Rock 
+        on!</font></p>
+    </td>
+    <td width="43%" height="341"> 
+      <p><img src="Seamless%20tiles%20tutorial_files/grids.jpg" width="300" height="306"></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><b>Edit &gt;&gt; Fill</b> 
+        ( <b>Select"Fill with Pattern "</b></font> )</p>
+      <p><b><font face="Verdana, Arial, Helvetica, sans-serif"><b>View &gt;&gt; 
+        Show Grid</b></font></b></p>
+    </td>
+    <td width="7%" height="341">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td colspan="2" height="21"><font color="#b67805"> </font><b><font color="#b67805">| 
+      </font><b><a href="http://pixelpoke.com/index.html"><font color="#006666" size="1" face="Verdana, Arial, Helvetica, sans-serif">home</font></a></b><font color="#b67805"> |<font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+      </font></font><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b><a href="http://pixelpoke.com/Who.html"><font color="#006666">who</font></a></b></font><a href="http://www.pixelpoke.com/Tutorial%20One/Who.html"><font color="#006666"> 
+      </font></a><font color="#b67805">|<font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+      </font></font><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b><a href="http://pixelpoke.com/Links.html"><font color="#006666">links</font></a></b></font><font color="#b67805"> | <a href="http://pixelpoke.com/FREE%20PIXELS_backgrounds.html"><font color="#006666"><b><font size="1" face="Verdana, Arial, Helvetica, sans-serif">backgrounds</font></b></font></a><font color="#b67805"> | </font> <b><a href="http://pixelpoke.com/FREE%20PIXELS.html"><font color="#006666" size="1" face="Verdana, Arial, Helvetica, sans-serif">free 
+      stuff </font></a></b><font color="#b67805"> | <b><a href="http://pixelpoke.com/FREE%20PIXELS_textures.html"><font color="#006666" size="1" face="Verdana, Arial, Helvetica, sans-serif">ornaments</font></a></b><font color="#b67805"> <font color="#b67805">| <b><a href="mailto:jwaske@speakeasy.net"><font color="#006666" size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+      email</font></a> </b>|</font></font></font></font><font face="Arial"> </font></b></td>
+    <td width="7%" height="21"><a href="#Top"><img src="Seamless%20tiles%20tutorial_files/topcat.gif" align="bottom" border="0" width="32" height="32"></a></td>
+  </tr>
+</tbody></table>
+</body></html>

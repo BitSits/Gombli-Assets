@@ -1,0 +1,263 @@
+/* $Id: extra_voting_forms_all.css,v 1.1.2.3 2008/04/19 09:27:24 mercmobily Exp $ */
+
+
+/* Basic styles ----------------------------------------------------------- */
+
+/* Node links */ /* !Deve funzionare ovunque, non solo nei links */
+.links .extra_voting_forms,
+.links .extra_voting_forms .karma_form,
+.links .extra_voting_forms .karma_form_promoted { display: inline; }
+
+
+/* Form type 1 & 2 (Combo box) -------------------------------------------- */
+
+/* Small */
+.karma_1_small .karma_score,
+.karma_2_small .karma_score {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 0 4px;
+  color: #333;
+}
+.karma_1_small .karma_form_promoted .karma_score,
+.karma_2_small .karma_form_promoted .karma_score {
+  color: #960;
+  border-color: #e5ddac;
+  background: #ffc;
+}
+.karma_1_small select,
+.karma_1_small input,
+.karma_2_small select,
+.karma_2_small input { font-size: 90%; }
+
+
+/* Form type 3 (Up / Down) ------------------------------------------------ */
+
+/* Big */
+.karma_3_big {
+  display: block;
+  width: 50px;
+}
+.karma_3_big .karma_score {
+  display: block;
+  margin-bottom: 2px;
+  background: url("img/3_scorebg.gif");
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 150%;
+  letter-spacing: -0.1em;
+  color: #333;
+  text-shadow: 0 2px 0 #fff;
+}
+.karma_3_big .karma_form_promoted .karma_score {
+  background: url("img/3_scorebg_promoted.gif");
+  color: #960;
+}
+.karma_3_big .karma_buttons {
+  display: block;
+  text-align: center;
+}
+.karma_3_big .karma_buttons label {
+  text-align: left;
+  display: block;
+  font-size: 90%;
+}
+
+/* Small */
+.karma_3_small .karma_score {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 0 4px;
+  color: #333;
+}
+.karma_3_small .karma_form_promoted .karma_score {
+  color: #960;
+  border-color: #e5ddac;
+  background: #ffc;
+}
+.karma_3_small input { font-size: 90%; }
+
+
+/* Form type 4 (Up only) -------------------------------------------------- */
+
+/* Big */
+.karma_4_big {display: block; width: 72px; height: 71px; 
+background:url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat 0px -79px;}
+.karma_4_big .karma_score {display: block; background:url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat -72px -79px;
+width:48px; height: 30px; line-height: 30px; text-align: center; font-size: 25px; color: #6d6e71; text-shadow: 0 2px 0 #fff; padding-top:4px; float:left;}
+.karma_4_big .karma_form_promoted .karma_score {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat -72px -79px; color: #6d6e71;}
+.karma_4_big .karma_buttons {}
+
+/* Small */
+.karma_4_small .karma_score {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 0 4px;
+  color: #333;
+}
+.karma_4_small .karma_form_promoted .karma_score {
+  color: #960;
+  border-color: #e5ddac;
+  background: #ffc;
+}
+.karma_4_small input { font-size: 90%; }
+
+
+/* Comments (Hide / Show) ------------------------------------------------- */
+.karma_comment_hide { 
+  float: right;
+  background: url("img/comment_hide.gif") no-repeat;
+  height: 14px;
+  width: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.karma_comment_show { 
+  float: right;
+  background: url("img/comment_show.gif") no-repeat;
+  height: 14px;
+  width: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* The following styles are only applied when JavaScript is enabled:
+============================================================================ */
+
+
+/* Basic styles ----------------------------------------------------------- */
+html.js .extra_voting_forms input,
+html.js .extra_voting_forms label span { display: none; }
+
+html.js .has_negative_karma { display: inline; }
+
+/* Visual feedback while a form is waiting submission */
+html.js .karma_sending { 
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Form type 3 (Up / Down) ------------------------------------------------ */
+
+/* Big */
+html.js .karma_3_big .karma_buttons label {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+html.js .karma_3_big .karma_up_clicked_clickable,
+html.js .karma_3_big .karma_up_not_clicked_clickable,
+html.js .karma_3_big .karma_down_clicked_clickable,
+html.js .karma_3_big .karma_down_not_clicked_clickable { cursor: pointer; }
+
+html.js .karma_3_big .karma_up_clicked_not_clickable,
+html.js .karma_3_big .karma_up_not_clicked_not_clickable,
+html.js .karma_3_big .karma_down_clicked_not_clickable,
+html.js .karma_3_big .karma_down_not_clicked_not_clickable { cursor: default; }
+
+html.js .karma_3_big .karma_up_not_clicked_clickable { background-image: url("img/3_up_enabled_unclicked.gif"); margin-right: 2px; }
+html.js .karma_3_big .karma_up_clicked_clickable { background-image: url("img/3_up_enabled_clicked.gif"); margin-right: 2px; }
+html.js .karma_3_big .karma_up_not_clicked_not_clickable { background-image: url("img/3_up_disabled_unclicked.gif"); margin-right: 2px; }
+html.js .karma_3_big .karma_up_clicked_not_clickable { background-image: url("img/3_up_disabled_clicked.gif"); margin-right: 2px; }
+
+html.js .karma_3_big .karma_down_not_clicked_clickable { background-image: url("img/3_down_enabled_unclicked.gif"); }
+html.js .karma_3_big .karma_down_clicked_clickable { background-image: url("img/3_down_enabled_clicked.gif"); }
+html.js .karma_3_big .karma_down_not_clicked_not_clickable { background-image: url("img/3_down_disabled_unclicked.gif"); }
+html.js .karma_3_big .karma_down_clicked_not_clickable { background-image: url("img/3_down_disabled_clicked.gif"); }
+
+/* Small */
+html.js .karma_3_small .karma_buttons {
+  display: inline-block;
+  display: -moz-inline-box;
+  overflow: hidden;
+  vertical-align: middle;
+}
+html.js .karma_3_small .karma_buttons label {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+html.js .karma_3_small .karma_up_clicked_clickable,
+html.js .karma_3_small .karma_up_not_clicked_clickable,
+html.js .karma_3_small .karma_down_clicked_clickable,
+html.js .karma_3_small .karma_down_not_clicked_clickable { cursor: pointer; }
+html.js 
+html.js .karma_3_small .karma_up_clicked_not_clickable,
+html.js .karma_3_small .karma_up_not_clicked_not_clickable,
+html.js .karma_3_small .karma_down_clicked_not_clickable,
+html.js .karma_3_small .karma_down_not_clicked_not_clickable { cursor: default; }
+html.js .karma_3_small .karma_up_not_clicked_clickable { background-image: url("img/3_up_enabled_unclicked.gif"); margin-right: 2px; }
+html.js .karma_3_small .karma_up_clicked_clickable { background-image: url("img/3_up_enabled_clicked.gif"); margin-right: 2px; }
+html.js .karma_3_small .karma_up_not_clicked_not_clickable { background-image: url("img/3_up_disabled_unclicked.gif"); margin-right: 2px; }
+html.js .karma_3_small .karma_up_clicked_not_clickable { background-image: url("img/3_up_disabled_clicked.gif"); margin-right: 2px; }
+
+html.js .karma_3_small .karma_down_not_clicked_clickable { background-image: url("img/3_down_enabled_unclicked.gif"); }
+html.js .karma_3_small .karma_down_clicked_clickable { background-image: url("img/3_down_enabled_clicked.gif"); }
+html.js .karma_3_small .karma_down_not_clicked_not_clickable { background-image: url("img/3_down_disabled_unclicked.gif"); }
+html.js .karma_3_small .karma_down_clicked_not_clickable { background-image: url("img/3_down_disabled_clicked.gif"); }
+
+
+/* Form type 4 (Up only) -------------------------------------------------- */
+
+/* Big */
+html.js .karma_4_big .karma_buttons label {display: block; float: left; width: 48px; height: 37px;}
+
+html.js .karma_4_big .karma_up_clicked_clickable,
+html.js .karma_4_big .karma_up_not_clicked_clickable { cursor: pointer; }
+html.js .karma_4_big .karma_up_clicked_not_clickable,
+html.js .karma_4_big .karma_up_not_clicked_not_clickable { cursor: default; }
+
+html.js .karma_4_big .karma_up_not_clicked_clickable {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat -120px -79px; }
+html.js .karma_4_big .karma_up_clicked_clickable {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat -120px -116px; }
+html.js .karma_4_big .karma_up_not_clicked_not_clickable {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat -120px -79px; }
+html.js .karma_4_big .karma_up_clicked_not_clickable {background:url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat -120px -116px; }
+
+
+/* Small */
+html.js .karma_4_small .karma_buttons {
+  display: inline-block;
+  display: -moz-inline-box;
+  overflow: hidden;
+  vertical-align: middle;
+}
+html.js .karma_4_small .karma_buttons label {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+html.js .karma_4_small .karma_up_clicked_clickable,
+html.js .karma_4_small .karma_up_not_clicked_clickable { cursor: pointer; }
+html.js .karma_4_small .karma_up_clicked_not_clickable,
+html.js .karma_4_small .karma_up_not_clicked_not_clickable { cursor: default; }
+
+html.js .karma_4_small .karma_up_not_clicked_clickable { background-image: url("img/4_up_enabled_unclicked.gif"); }
+html.js .karma_4_small .karma_up_clicked_clickable { background-image: url("img/4_up_enabled_clicked.gif"); }
+html.js .karma_4_small .karma_up_not_clicked_not_clickable { background-image: url("img/4_up_disabled_unclicked.gif"); }
+html.js .karma_4_small .karma_up_clicked_not_clickable { background-image: url("img/4_up_disabled_clicked.gif"); }
+
+.drigg_external_button_add a {
+background-image:url(http://designbump.com/sites/all/themes/designbumpv3/img/submitexternal.png);
+color:#A7A9AC;
+display:block;
+font-weight:bold;
+height:71px;
+line-height:115px;
+text-align:left;
+font-size:11px;
+padding:0 0 0 4px;
+}

@@ -1,0 +1,1428 @@
+﻿a:link {color: #e10022; text-decoration: none;}
+a:visited {color: #e10022; text-decoration: none;}
+a:hover {color: #e10022; text-decoration: underline;}
+a:active {color: #e10022; text-decoration: underline;}
+
+a.signInStrip:link {color: #fdfdfd; text-decoration: none;}
+a.signInStrip:visited {color: #fdfdfd; text-decoration: none;}
+a.signInStrip:hover {color: #fdfdfd; text-decoration: underline;}
+a.signInStrip:active {color: #fdfdfd; text-decoration: underline;}
+
+a.footerLink:link {color: #fdfdfd; text-decoration: none;}
+a.footerLink:visited {color: #fdfdfd; text-decoration: none;}
+a.footerLink:hover {color: #fdfdfd; text-decoration: underline;}
+a.footerLink:active {color: #fdfdfd; text-decoration: underline;}
+
+body
+{    
+    background: #000 url(Images/home.jpg) no-repeat top center;
+    text-align: center;
+    min-width: 800px;
+    margin: 0;
+    font-family: Verdana, Arial;
+    font-size: 9pt;
+    color: #353535;
+}
+
+.body1
+{    
+    background: #000 url(Images/home.jpg) no-repeat top center;
+    text-align: center;
+    min-width: 800px;
+    margin: 0;
+    font-family: Verdana, Arial;
+    font-size: 9pt;
+    color: #353535;
+}
+
+.body2
+{    
+    background: #000 url(Images/gaming.jpg) no-repeat top center;
+    text-align: center;
+    min-width: 800px;
+    margin: 0;
+    font-family: Verdana, Arial;
+    font-size: 9pt;
+    color: #353535;
+}
+
+.body3
+{    
+    background: #000 url(Images/generic.jpg) no-repeat top center;
+    text-align: center;
+    min-width: 800px;
+    margin: 0;
+    font-family: Verdana, Arial;
+    font-size: 9pt;
+    color: #353535;
+}
+
+.body4
+{    
+    background: #000 url(Images/multimedia.jpg) no-repeat top center;
+    text-align: center;
+    min-width: 800px;
+    margin: 0;
+    font-family: Verdana, Arial;
+    font-size: 9pt;
+    color: #353535;
+}
+
+.body5
+{    
+    background: #000 url(Images/software.jpg) no-repeat top center;
+    text-align: center;
+    min-width: 800px;
+    margin: 0;
+    font-family: Verdana, Arial;
+    font-size: 9pt;
+    color: #353535;
+}
+
+
+h1
+{
+	color: #ffffff;
+	font-size: 18pt;
+	margin: 45px 0px 15px 0px;
+	font-weight: bold;	
+}
+
+h2
+{
+	color: #00aeef;
+	font-size: 13.5pt;
+	margin: 0px 0px 0px 0px;
+	font-weight: bold;	
+}
+
+h3
+{
+	color: #00aeef;
+	font-size: 10.5pt;
+	margin: 0px 0px 0px 0px;
+	font-weight: bold;	
+}
+
+img
+{
+	border: 0;
+}
+
+.clearL
+{
+	clear: left;	
+}
+
+tr
+{
+	vertical-align: top;	
+}
+
+p
+{
+	margin: 0px;
+	padding-top: 15px;
+}
+
+.greyHeadText
+{
+	color: #696969;
+	font-size: 10.5pt;	
+	font-weight: bold;
+}
+
+.greyMediumText
+{
+	color: #696969;
+	font-size: 9.5pt;
+	font-weight: bold;
+}
+
+.greenFont
+{
+	color: #80f012;	
+}
+
+.blueFont
+{
+	color: #00aeef;	
+}
+
+.pinkFont
+{
+	color: #e30079;	
+}
+
+.bodyList
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#container
+{
+    margin: 0 auto;
+    width: 800px;
+    text-align: left;
+}
+#container1
+{
+    margin: 0 auto;
+    width: 400px;
+    text-align: left;
+}
+.logoLink
+{
+    margin: 15px 12px 0 0;
+    vertical-align: top; 
+}
+
+#content
+{
+	padding: 0px 0px 40px 0px;
+}
+
+#menuContainer
+{
+	background: #000000;
+	height: 34px;
+}
+
+#nav, #nav ul
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#nav a:hover
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+	background: #4c4c4c;
+}
+
+#nav a
+{
+	display: block;
+	color: #ffffff;
+	font-size: 11pt;
+	font-weight: bold;
+	background: #000000 url(Images/navSpacer.gif) no-repeat right;
+	padding: 8px 15px 8px 15px;
+}
+
+#nav li
+{
+	float: left;	
+}
+
+
+.navHome
+{
+	width: auto;	
+}
+
+.navCompete
+{
+	width: auto;
+}
+
+.navLearn
+{
+	width: auto;
+}
+
+.navSocialize
+{
+	width: auto;	
+}
+
+.navAdmin
+{
+	width: auto;	
+}
+
+.navExplore
+{
+	width: auto;	
+}
+
+#nav li ul
+{
+	position: absolute;
+	width: 140px;
+	left: -999em;
+	padding-left:15px;
+}
+
+#nav li ul li
+{
+	width: 170px;
+	height: auto;
+}
+
+#nav li ul li a
+{
+	display: block;
+	width: 170px;
+	color: #ffffff;
+	font-size: 8pt;
+	font-weight: bold;
+	background: #333333;
+	padding: 8px 13px 8px 13px;
+	border-top: solid 1px #4c4c4c;
+	border-right: solid 1px #242424;
+	border-bottom: solid 1px #242424;
+	border-left: solid 1px #4c4c4c;
+}
+
+/***************** START: Some CSS classes added from IC2008 to support submenu *****************/
+#nav li ul ul 
+{
+	margin: -30px 0px 0px 155px;
+	/*padding-top:5px;*/
+}
+
+#nav li ul ul ul
+{
+	margin: -30px 0px 0px 155px;
+	padding-top:5px;
+}
+
+#nav li.over ul
+{
+	background-position: 0 0;
+}
+
+#nav li.over ul ul, #nav li.over ul ul ul, #nav li.over ul ul ul ul 
+{
+	left: -999em;
+}
+
+#nav li.overleft ul ul, #nav li.overleft ul ul ul, #nav li.overleft ul ul ul ul
+{
+	left: -320px;
+}
+
+#nav li.over ul, #nav li li.over ul, #nav li li li.over ul, #nav li li li li.over ul 
+{
+	left: auto;
+}
+
+#nav li.overleft ul, #nav li li.overleft ul, #nav li li li.overleft ul, #nav li li li li.overleft ul 
+{
+	left: -320px;
+}
+/***************** END: Some CSS classes added from IC2008 to support submenu *****************/
+
+#nav li:hover ul
+{
+	left: auto;
+}
+
+#nav li:hover ul, #nav li.sfhover ul
+{
+	left: auto;
+}
+
+#nav li ul li.navDigital a:hover
+{
+	background: #e30079;	
+}
+
+#nav li ul li.navSkills a:hover
+{
+	background: #00aeef;	
+}
+
+#nav li ul li.navProject a:hover
+{
+	background: #80f012;	
+}
+#nav li ul li.navAll a:hover
+{
+	background: #e8092a;	
+}		
+
+.signInStrip
+{
+	background: #e8092a;
+	height: 17px;
+	color: #050505;	
+}
+
+.signInStripLeft
+{
+	float: left;
+	font-size: 8pt;
+}
+
+.signInStripLeftPad
+{
+	padding: 1px 0px 0px 21px;	
+}
+
+.signInStripRight
+{
+	float: right;
+	font-size: 8pt;	
+}
+
+.signInStripRightPad
+{
+	padding: 1px 14px 0px 0px;	
+}
+
+.footerStrip
+{
+	background: #333;
+	height: 17px;
+	color: #fff;	
+}
+
+.footerLeft
+{
+	float: left;
+	font-size: 8pt;
+}
+
+.footerLeftPad
+{
+	padding: 1px 0px 0px 5px;	
+}
+
+.footerRight
+{
+	float: right;
+	font-size: 8pt;
+	background: #333;	
+}
+
+.footerRightPad
+{
+	padding: 1px 0px 0px 0px;	
+}
+
+.footerCredits
+{	
+	font-size: 8pt;
+	color: #555555;
+}
+
+.footerMicrosoftLinks
+{
+	float: left;
+	font-size: 8pt;
+}
+
+/*Style class definitions for newsletter template*/
+.NewsletterBody 
+{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:Arial;
+	color: #706f6f;
+	font-size: 9pt;
+	line-height: 15pt;  
+}
+
+.NewsletterHeadline
+{
+        font-family:Arial;
+        color:#595959;
+        font-size:11pt;
+        font-weight:bold;
+}
+
+.Newslettera
+{
+	font-family :Arial;
+    color:#FF0000;
+}
+.NewsletterFooter
+{
+   font-family :Arial;
+    color:#706f6f;
+   font-size:-1pt;
+}
+/*Style class definitions for newsletter template*/
+
+/* Home Page Styles */
+#homePad
+{
+    padding: 20px 20px 0px 20px;
+    background: #fff;
+}
+
+#sponsors
+{
+	color: #00aeef;	
+	font-weight: bold;
+	font-size: 8pt;
+	background: #ffffff;
+}
+
+#sponsorsPad
+{
+	padding: 37px 0px 20px 25px;	
+}
+
+#msLogo
+{
+	text-align: right;
+	padding: 15px 15px 15px 0px;
+	background: #ffffff;
+}
+
+.homeLinks
+{
+	padding: 12px 0px 12px 0px;
+	background: #ffffff;
+}
+
+.homeLinksLeft
+{
+	float: left;
+	width: 205px	
+}
+
+.homeLinksRight
+{
+	float: left;
+	width: 555px;
+	padding-top: 3px;
+	font-weight: bold;
+	font-size: 8pt;
+	color: #e30079;	
+}
+
+#highlights
+{
+	padding: 15px 0px 15px 0px;
+	background: #ffffff;	
+}
+
+#highlight1
+{
+	float: left;
+	width: 177px;
+	display: inline;
+	margin-right: 17px;
+	font-weight: bold;
+	font-size: 8pt;
+	line-height: 13pt;
+}
+
+#highImg1 a
+{
+	display: block;
+	width: 177px;
+	height: 100px;
+	border: solid 1px #ffffff;
+	background: url(Images/high1.jpg) no-repeat;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+
+#highImg1 a:hover
+{
+	border: solid 1px #e30079;
+}
+
+.highTopPad
+{
+	padding-top: 5px;	
+}
+
+#highlight2
+{
+	float: left;
+	width: 177px;
+	display: inline;
+	margin-right: 17px;
+	font-weight: bold;
+	font-size: 8pt;
+	line-height: 13pt;
+}
+
+#highImg2 a
+{
+	display: block;
+	width: 177px;
+	height: 100px;
+	border: solid 1px #ffffff;
+	background: url(Images/high2.jpg) no-repeat;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+
+#highImg2 a:hover
+{
+	border: solid 1px #e30079;
+}
+
+#highlight3
+{
+	float: left;
+	width: 177px;
+	display: inline;
+	margin-right: 17px;
+	font-weight: bold;
+	font-size: 8pt;
+	line-height: 13pt;
+}
+
+#highImg3 a
+{
+	display: block;
+	width: 177px;
+	height: 100px;
+	border: solid 1px #ffffff;
+	background: url(Images/high3.jpg) no-repeat;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+
+#highImg3 a:hover
+{
+	border: solid 1px #e30079;
+}
+
+#highlight4
+{
+	float: left;
+	width: 177px;
+	font-weight: bold;
+	font-size: 8pt;
+	line-height: 13pt;
+}
+
+#highImg4 a
+{
+	display: block;
+	width: 177px;
+	height: 100px;
+	border: solid 1px #ffffff;
+	background: url(Images/high4.jpg) no-repeat;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+
+#highImg4 a:hover
+{
+	border: solid 1px #e30079;
+}
+
+/* Other Template Styles */
+#genericHead
+{
+    background: #fff url(Images/title_generic.jpg) no-repeat;   
+    height: 110px;
+}
+
+#genericHead h2
+{
+    font-weight: bold;
+    font-size: 15pt;
+    padding: 15px 0 0 25px;
+    color: #000;
+   
+}
+
+.digitalText
+{
+	width: 397px;
+	height: 120px;
+	float: left;
+	background: #000000;
+}
+
+.skillText
+{
+	width: 473px;
+	height: 120px;
+	float: left;
+	background: #000000;
+}
+
+.projectText
+{
+	width: 473px;
+	height: 120px;
+	float: left;
+	background: #000000;
+}
+
+.digitalHead
+{
+	background: url(Images/IC09_HD_DigitalArts_RHS.gif) no-repeat;	
+	width: 415px;
+	height: 120px;
+	float: left;	
+}
+
+.skillHead
+{
+	background: url(Images/IC09_HD_KnowledgeSkills_RHS.gif) no-repeat;	
+	width: 339px;
+	height: 120px;
+	float: left;	
+}
+
+.projectHead
+{
+	background: url(Images/IC09_HD_ProjectComp_RHS.gif) no-repeat;	
+	width: 339px;
+	height: 120px;
+	float: left;	
+}
+
+.breadCrumb
+{
+	font-size: 8pt;	
+}
+
+.compSpacer
+{
+	height: 2px;
+	background: #333333;	
+}
+
+/*Added new class CompBodyTable for center*/
+#compBodyTableCenter
+{
+	width: 100%;
+	height: 460px;	
+}
+
+#compBodyTable
+{
+	width: 100%;
+	height: 460px;
+	table-layout: fixed;
+}
+
+#compBodyLeft
+{
+	width: 550px;
+	background: #ffffff;	
+}
+
+#compBodyLeftPad
+{
+	padding: 5px 20px 30px 20px;	
+}
+
+#compBodyRight
+{
+	width: 250px;
+	background: #e1e1e1;		
+}
+
+#compBodyRightPad
+{
+	padding: 15px 15px 15px 15px;
+}
+
+#registerButton
+{
+	padding: 10px 0px 0px 40px;	
+}
+
+#registerButton a
+{
+	display: block;
+    height: 40px;
+    width: 138px;
+	background: url(Images/IC09_Button_Register_Enabled.gif) no-repeat;
+	text-decoration: none;
+}
+
+#registerButton a:visited
+{
+	background: url(Images/IC09_Button_Register_Enabled.gif) no-repeat;
+}
+
+#registerButton a:hover
+{
+	background: url(Images/IC09_Button_Register_Rollover.gif) no-repeat;
+}
+
+#registerButton a:active
+{
+	background: url(Images/IC09_Button_Register_Rollover.gif) no-repeat;
+}
+
+#signInButton
+{
+	padding: 10px 0px 0px 40px;	
+}
+
+#signInButton a
+{
+	display: block;
+    height: 40px;
+    width: 138px;
+	background: url(Images/IC09_Button_SignIn_Enabled.gif) no-repeat;
+	text-decoration: none;
+}
+
+#signInButton a:visited
+{
+	background: url(Images/IC09_Button_SignIn_Enabled.gif) no-repeat;
+}
+
+#signInButton a:hover
+{
+	background: url(Images/IC09_Button_SignIn_Rollover.gif) no-repeat;
+}
+
+#signInButton a:active
+{
+	background: url(Images/IC09_Button_SignIn_Rollover.gif) no-repeat;
+}
+
+#signUpButton
+{
+	padding: 10px 0px 0px 40px;	
+}
+
+#signUpButton a
+{
+	display: block;
+    height: 40px;
+    width: 138px;
+	background: url(Images/IC09_Button_SignUp_Enabled.gif) no-repeat;
+	text-decoration: none;
+}
+
+#signUpButton a:visited
+{
+	background: url(Images/IC09_Button_SignUp_Enabled.gif) no-repeat;
+}
+
+#signUpButton a:hover
+{
+	background: url(Images/IC09_Button_SignUp_Rollover.gif) no-repeat;
+}
+
+#signUpButton a:active
+{
+	background: url(Images/IC09_Button_SignUp_Rollover.gif) no-repeat;
+}
+
+#learnBlock
+{
+	float: left;
+	width: 13px;
+	height: 50px;
+	background: #e30079;	
+}
+
+#learnText
+{
+	float: left;
+	width: 948px;
+	height: 50px;
+	background: #666666;
+	font-size: 18pt;
+	font-weight: bold;
+	color: #ffffff;
+	vertical-align: middle;	
+}
+
+#learnTextPad
+{
+	padding: 10px 0px 0px 10px;	
+}
+
+
+
+/* Classes added by Fast Track */
+/*Shirish*/
+.body_home
+{    
+    background: #000 url(Images/home.jpg) no-repeat top center;
+    text-align: center;
+    min-width: 800px;
+    margin: 0;
+    font-family: Verdana, Arial;
+    font-size: 9pt;
+    color: #353535;
+}
+
+
+
+
+.body_DefaultHome
+{    
+    background: #000 url(Images/spotlight.jpg) no-repeat top center;
+    text-align: center;
+    min-width: 800px;
+    margin: 0;
+    font-family: Verdana, Arial;
+    font-size: 9pt;
+    color: #353535;
+}
+.compBodyLeft
+{
+	width: 550px;
+	background: #ffffff;
+}
+/* [Start] [Shirish] [Changes done by Mondo #fff added to background] */
+.genericHead
+{
+    background: #fff url(Images/title_generic.jpg) no-repeat;   
+    height: 110px;
+}
+/* [End] [Shirish] [Changes done by Mondo #fff added to background] */
+
+.CMSPageBackgroundWhite
+{
+	background-color:White;
+}
+.CMSPageBackGroundGray
+{
+  background-color:#e1e1e1;
+}
+.compBodyRightWhite
+{
+	width: 250px;
+	background: #ffffff;	
+}
+.compBodyCenter
+{
+	width: 800px;
+	background: #ffffff;
+	padding: 0px 20px 0px 0px;
+}
+.compBodyCenterWidth
+{
+	width: 780px;
+	background: #ffffff;
+	padding: 0px 20px 0px 0px;
+}
+
+.compBodyCenterPad
+{
+	padding: 5px 25px 30px 25px;
+}
+.profileComp
+{
+	font-weight:bold;
+	background-color: #ececec;
+	padding: 3px 0px 3px 10px;
+	border-bottom: solid 1px #ffffff;
+}
+
+.profileCompSelected
+{
+	background-color: #00aeef;
+	padding: 4px 0px 4px 10px;
+	color: #ffffff;
+	font-weight: bold;
+	border-bottom: solid 1px #ffffff;
+}
+.registerButtons
+{
+	background-color: #666666;
+	padding: 8px 10px 8px 0px;
+	text-align: right;
+}
+.registerCellLeft
+{
+	width: 142px;
+	background-color: #666666;
+	padding: 6px 10px 0px 10px;
+	color: #ffffff;
+	font-weight: bold;
+	border-bottom: solid 1px #ffffff;
+	border-right: solid 1px #ffffff;
+}
+
+.registerCellRight
+{
+	
+	background-color: #ececec;
+	padding: 3px 0px 3px 10px;
+	border-bottom: solid 1px #ffffff;	
+}
+.registerCellLeftRequired
+{
+	width: 142px;
+	background-color: #E8092A;
+	padding: 6px 10px 0px 10px;
+	color: #ffffff;
+	font-weight: bold;
+	border-bottom: solid 1px #ffffff;
+	border-right: solid 1px #ffffff;
+}
+.breadCrumbPad
+{
+	padding-left:10pt;
+	padding-top:10pt;
+}
+.FullColumnWidth
+{
+    width:750px;
+}
+#compBodyLeftBigColumn
+{
+	width: 720px;
+	background: #ffffff;
+}
+#compBodyLeftFirstBigColumn
+{
+	width: 790px;
+	background: #FFFFFF;
+}
+
+
+/*Sumit*/
+.panelheader
+{
+	color: #00aeef;
+	font-size: 10.5pt;
+	margin: 0px 0px 0px 0px;
+	font-weight: bolder;
+}
+
+/* Classes added by Fast Track */
+
+
+/*[Start] Leaderboard classes
+Added By shivkant From IC2009 css*/
+#leaderTableScrollDiv
+{
+	height: 800px;
+	width: 745px;
+	overflow: scroll;
+	/*margin-right:-45px;	*/
+}
+
+.LeaderBoard_CurrentLeaderRow
+{
+	background: #060606;
+	color: #f46101;
+	font-weight: bold;
+	font-size: 9pt;	
+}
+.leaderHeadRow
+{
+	background: #888888;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 9pt;
+	width: 711px;
+}
+
+.leaderWhiteRow
+{
+	background: #ffffff;
+	color: #434345;
+	font-weight: normal;
+	font-size: 9pt;
+	width: 711px;
+}
+.leaderGrayRow
+{
+	background: #eeeeee;
+	color: #434345;
+	font-weight: normal;
+	font-size: 9pt;
+	width: 711px;
+}
+
+.leaderTableDivPad2
+{
+	clear: left;
+ 	background: #ffffff;
+	padding: 15px 0px 5px 0px;
+}
+
+.leaderTableDivPad3
+{
+	background: #ffffff;
+	padding: 0px 0px 5px 0px;
+}
+
+.leaderMulHeadCell1
+{
+	width: 52px;	
+	padding-left: 5px;
+	border-top: solid 1px #909090;		
+}
+
+.leaderMulHeadCell2
+{
+	width: 8%;		
+	border-top: solid 1px #909090; 	
+}
+
+
+.leaderMulCell1
+{
+	width: 63px;
+	padding: 3px 3px 4px 13px;
+}
+
+.leaderMulCell2
+{
+	width: 19px;
+	padding: 3px 3px 4px 4px;
+}
+
+.leaderMulCell3
+{
+	width: 113px;
+	padding: 3px 3px 4px 3px;
+}
+
+.leaderCell1
+{
+	width: 95px;
+	padding: 3px 3px 4px 13px;
+}
+
+.leaderCell2
+{
+	width: 120px;
+	padding: 3px 3px 4px 3px;
+}
+
+.leaderCell3
+{
+	width: 195px;
+	padding: 3px 3px 4px 3px;
+}
+
+.leaderCell4
+{
+	width: 132px;
+	padding: 3px 3px 4px 3px;
+}
+
+.leaderCell5
+{
+	width: 82px;
+}
+
+.leaderHeadCell1
+{
+	width: 95px;
+	padding-left: 10px;
+	border-top: solid 1px #909090;
+}
+
+.leaderHeadCell2
+{
+	width: 120px;	
+	border-top: solid 1px #909090;
+}
+
+.leaderHeadCell3
+{
+	width: 195px;
+	border-top: solid 1px #909090;
+}
+
+.leaderHeadCell4
+{
+	width: 132px;
+	border-top: solid 1px #909090;
+}
+
+.leaderHeadCell5
+{
+	width: 82px;
+	border-top: solid 1px #909090;
+}
+
+.leaderAdvancedOther
+{	
+	background: #94FC00;
+}
+
+.leaderAdvanced
+{
+	background: #f9b493;	
+}
+
+.leaderNotAdvanced
+{
+	background: #eeeeee;
+}
+
+/*[End] Leaderboard classes*/
+
+
+
+.whatIsCatLeft
+{
+	width: 40px;
+	float: left;
+	text-align: center;
+}
+
+.whatIsCatRight
+{
+	width: 480px;
+	float: left;
+	padding-top: 5px;
+}
+
+.whatIsCatClear
+{
+	clear: both;
+	height: 35px;
+}
+
+/*START : Added for MyTeam Page Photo Gallery Control*/
+.DataList_PhotoGallery
+{
+	clear: both;
+	margin:auto;
+}
+/*END : Added for MyTeam Page Photo Gallery Control*/
+
+/* Classes for Menu color */
+#nav li ul li.navDigital a:hover
+{
+	background: #e30079;	
+}
+
+#nav li ul li.navSkills a:hover
+{
+	background: #00aeef;	
+}
+
+#nav li ul li.navProject a:hover
+{
+	background: #80f012;	
+}
+/* Classes for Menu color */
+
+#genericHeadCMS
+{
+    background: #fff url(Images/CMS_title_generic.jpg) no-repeat;   
+    height: 110px;
+}
+#genericHeadCMS h2
+{
+    font-weight: bold;
+    font-size: 15pt;
+    padding: 15px 0 0 25px;
+    color: #000;
+   
+}
+.compBodyCenterPadBig
+{
+	
+	padding: 25px 5px 30px 5px;
+	width:790px;
+	
+}
+
+.timetext
+{
+	color:Black;
+	font-size:13.5pt;
+	font-weight:700;
+}
+.statictext
+{
+	color: #00aeef;
+	font-size: 13pt;
+	font-weight:lighter;	
+}
+/*start CSS for CMS*/
+.CommonContentPartBorderOff
+{
+padding: 1px; 
+}
+.CommonContentPartBorderOn
+{
+border: dashed 1px #999;
+background-color: Gray; 
+}
+.MasterDataToInsert
+{
+	border: dashed 1px #999;
+	background-color: Green; 
+}
+/*end CSS for CMS*/
+.PaddingleftDiv
+{
+    padding-left :107px;
+}
+.PaddingleftDiv1
+{
+    padding-left :121px;
+}
+
+/*Copied from IC2009.css file for showing menus when javascript is disabled */
+.no_script_nav
+{
+	float: left;
+	width: 100%;
+	height: auto;
+	background-color: #282828;
+	clear: left;
+	padding-top: 10px;
+}
+
+.no_script_nav a
+{
+	color: #999999;	
+	text-decoration: none;
+}
+
+.no_script_nav a:hover
+{
+	text-decoration: none;
+	color: #ffffff;	
+}
+
+/*AutoComplete flyout */
+
+.autocomplete_completionListElement 
+{  
+    margin : 0px!important;
+    background-color : Transparent;
+    color : windowtext;
+    border : buttonshadow;    
+    cursor : 'default';
+    overflow : auto;	    
+    text-align : left;         
+    max-height: 200px;
+    list-style-type : none;
+    padding-left:0px;
+}
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItem
+{
+    background-color: #ffff99;
+    color: black;
+    border-bottom:dotted 1px black;
+    padding:3px 0px 3px 0px;
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItem 
+{
+    background-color : window;
+    color : windowtext;
+    padding : 1px;    
+    border-bottom:dotted 1px black;
+    padding:3px 0px 3px 0px;
+    margin-bottom:1px;
+}
+
+/* Horizontal line break on default page*/
+.HorizontalLineBreak
+{
+    width:100%;
+    background-color:#dddbdb;
+    height:2px;
+}
+
+/*Modal Popup styles */
+/*START*/
+#popupMask {
+	position: absolute;
+	z-index: 200;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	/* this hack is so it works in IE
+	 * I find setting the color in the css gives me more flexibility 
+	 * than the PNG solution.
+	 */
+	/*background-color:transparent !important;
+	background-color: #333333;*/
+	background-color:Gray;
+	/* this hack is for opera support
+	 * you can uncomment the background-image if you don't care about opera.
+	 * this gives you the flexibility to use any bg color that you want, instead of the png
+	 */
+	/*background-image: url("maskBG.png") !important; /*For browsers Moz, Opera, etc.*/
+	background-image:none;
+	background-repeat: repeat;
+	display:none;
+}
+#popupContainer {
+	position: absolute;
+	z-index: 201;
+	top: 0px;
+	left: 0px;
+	display:none;
+	padding: 0px;
+}
+#popupInner {
+	border: 2px solid #000000;
+	background-color: #ffffff;
+}
+
+#popupFrame {
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 202;
+}
+#popupTitleBar {
+	background-color: #486CAE;
+	color: #ffffff;
+	font-weight:bold;
+	height: 1.3em;
+	padding: 5px;
+	border-bottom: 2px solid #000000;
+	border-top: 1px solid #78A3F2;
+	border-left: 1px solid #78A3F2;
+	border-right: 1px solid #204095;
+	position: relative;
+	z-index: 203;
+}
+#popupTitle {
+	float:left;
+	font-size: 1.1em;
+}
+#popupControls {
+	float: right;
+	cursor: pointer;
+	cursor: hand;
+}
+/*END*/
+
+.border_bottom
+{
+	border-bottom-style:solid;
+	border-bottom-color:Black;
+	border-left-style:none;
+	border-top-style:none;
+	border-right-style:none;
+}
+
+a.VoteLink {
+	background-image:url(Images/Competition/like_icon.gif);
+	background-position:left top;
+	background-repeat:no-repeat;
+	padding:5px 0px 0px 22px;
+	color:#f00;
+	text-decoration:none;
+}
+a.VoteLink:hover {
+	text-decoration:underline;
+}
+

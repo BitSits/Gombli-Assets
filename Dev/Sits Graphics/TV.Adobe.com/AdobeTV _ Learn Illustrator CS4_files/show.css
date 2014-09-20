@@ -1,0 +1,179 @@
+/*******************************
+	Show
+********************************/
+#content .header.columns .column.one{
+	width:100%;
+	margin-right:0px;
+}
+#content .header.columns .column.two{
+	display:none;
+}
+
+/********* Masthead *********/
+#content .masthead{
+	position:relative;
+	background:url(../images/layout/global/border-lightangrey.png) repeat-x bottom;
+	margin-bottom:30px;
+	padding-bottom:20px;
+}
+#content .masthead img.logo{
+	background:url(../images/layout/product/logo-border-large.png);
+	padding:6px 8px 8px 6px;
+	position:absolute;
+}
+#content .masthead h1{
+	text-transform:uppercase;
+	margin:0px 0px 10px 130px;
+	background:none;
+	padding-top:10px;
+	height:auto;
+}
+#content .masthead h2{
+	margin:0px 0px 6px 130px;
+	color:#0093dc;
+	font-size:1.2em;
+	text-transform:uppercase;
+	background:url(../images/layout/global/border-lightangrey.png) repeat-x bottom;
+	padding-bottom:7px;
+	font-weight:bold;
+}
+#content .masthead .about{
+	margin:0px 100px 0px 130px;
+	color:#4f4f4f;
+	font-size:1em;
+}
+#content .masthead .about p{
+	margin-bottom:10px;
+}
+#content .masthead .about a.addtohome{
+	background:url(../images/content/icons/addremove-episode.png) no-repeat left top;
+	line-height:15px;
+	height:15px;
+	padding-left:25px;
+	font-size:0.9em;
+	margin:5px 20px 0px 0px;
+}
+#content .masthead .about a.addtohome.save,#content .masthead .about a.addtohome.notloggedin{
+	background-position:left top;
+}
+#content .masthead .about a.addtohome.remove{
+	background-position:left bottom;
+}
+#content .masthead .about a.feed{
+	background:url(../images/content/icons/feed-12.png) no-repeat left center;
+	line-height:12px;
+	padding-left:17px;
+	font-size:0.9em;
+}
+
+/*******************************
+	List
+********************************/
+#content .body .column.one h2{
+	background:url(../images/layout/global/border-lightangrey.png) repeat-x bottom;
+	padding-bottom:7px;
+	font-size:1.7em;
+}
+
+.list table thead tr th{
+	font-size:0.75em;
+	color:#525252;
+	padding:5px 0px 3px;
+	font-weight:bold;
+}
+.list table th,.list table td{
+	border-bottom:1px solid #bfbfbf;
+}
+.list table thead tr th.title{
+	width:405px;
+}
+.list table thead tr th.runtime{
+	width:60px;
+}
+.list table thead tr th.captions{
+	width:30px;
+	background:url(../images/content/icons/cc.png) no-repeat left 6px;
+	text-indent:-99999px;
+	overflow:hidden;
+}
+.list table thead tr th.rating{
+	width:90px;
+}
+.list table thead tr th.save{
+	width:55px;
+}
+
+
+
+.list table td{
+	font-size:0.85em;
+	line-height:26px;
+	overflow:hidden;
+}
+.list table td a{
+	display:block;
+	text-transform:uppercase;
+	color:#000;
+	font-weight:bold;
+	background:url(../images/layout/global/btn-play.png) no-repeat;
+	line-height:11px;
+	padding-left:25px;
+}
+.list table td .popup{
+	display:none;
+}
+
+.list table td div.cc,.list table td div.rating,.list table td a.save,.list table td a.remove{
+	text-indent:-99999px;
+}
+.list table td div.cc{
+	background:url(../images/content/icons/cc.png) no-repeat center left;
+}
+.list table td a.save,.list table td a.remove{
+	line-height:15px;
+	height:15px;
+}
+.list table td a.save{
+	background:url(../images/content/icons/addremove-episode.png) no-repeat center top;
+}
+.list table td a.remove{
+	background:url(../images/content/icons/addremove-episode.png) no-repeat center bottom;
+}
+
+#episodes{
+	margin-bottom:40px;
+}
+/*******************************
+	Playlists
+********************************/
+#playlists .list{
+	margin-bottom:30px;
+}
+#playlists .list h3{
+	font-size:1.2em;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin-bottom:5px;
+}
+
+
+/*******************************
+	Sponsor
+********************************/
+#content .sponsor{
+	height:120px;
+}
+#content .sponsor h3{
+	font-size:0.75em;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+/*******************************
+	Related
+********************************/
+#related h2{
+	font-size:1.8em;
+	background:url(../images/layout/global/border-lightangrey.png) repeat-x bottom;
+	padding-bottom:6px;
+}

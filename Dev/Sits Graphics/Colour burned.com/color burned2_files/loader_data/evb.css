@@ -1,0 +1,68 @@
+html {}
+body {color:#7a7a7a; margin:0; padding:0; border:0; /* This removes the border around the viewport in old versions of IE */ font: 80%/160% Helvetica, Arial, sans-serif; width: 100%; display: table;}
+#wrapperfix {width: 962px; margin: 0 auto;padding: 0;}
+/* General Rules */
+a {text-decoration: none; color: #779fa0;}
+a:hover {text-decoration: underline;}
+.item-list ul li {list-style-type: none; list-style-image: none; margin: 0px; padding:0px;}
+/* Header styles */
+#header {clear:both; float:left; width:100%; height:121px; margin: 0 0 12px 0;}
+#header #masthead {height: 121px; }
+#header #masthead #headerlogo {float: left; width: 334px; height: 121px;}
+/*  Content Start */
+#capped {clear:both; float:left; width:100%; height:18px; background: url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat} 
+/* column container */	
+.main {position:relative; /* This fixes the IE7 overflow hidden bug */ clear:both; float:left; width:100%; /* width of whole page */ overflow:hidden; /* This chops off any overhanging divs */}	
+/* common column settings */
+.mainsub {float:left; width:100%; position:relative;}
+.contentall, .sidebar {float:left; position:relative; padding:0 0 1em 0; overflow:hidden;}
+/* 2 Column (right menu) settings */
+.rightmenu {background-image: url(http://designbump.com/sites/all/themes/designbumpv3/img/rightmainbg.png); background-repeat: repeat-y; background-position: right;/* right column background colour */}
+.rightmenu .mainsub {right:313px; /* right column width */ background: url(http://designbump.com/sites/all/themes/designbumpv3/img/mainshadowbg.png); background-repeat: repeat-y; background-position: right; /* left column background colour */} 
+.rightmenu .contentall {width:600px; /* left column content width (left column width minus left and right padding) */ left:341px; /* (right column width) plus (left column left padding) */}
+.rightmenu .sidebar {width:292px; /* right column content width (right column width minus left and right padding) */ left:381px; /* (right column width) plus (left column left and right padding) plus (right column left padding) */}
+/*  Front Page Main Content Top */
+#contenttop{width: 600px;}
+#contenttop div.controlbar h1 {margin: 0; padding: 3px 0 0 0; float: left; font-size: 23px; font-weight: normal; color:#7a7a7a;}
+#contenttop div.controlbar ul {margin: 0; padding: 0; list-style: none; float:left;}
+#contenttop div.controlbar ul li {display: inline;}
+#contenttop div.controlbar ul.drigg-viewtype {float: left; font-size: 12px; color: #7a7a7a;}
+#contenttop div.controlbar ul.drigg-viewtype li a {display: block; float: left; margin-left: 7px; margin-right: 9px; padding: 6px 0 0 0;
+color: #779fa0; font-weight: bold;}
+#contenttop div.controlbar ul.drigg-viewtype li.active a {display:none;}
+#contenttop div.controlbar ul.drigg-order {text-align: right; float: left;}
+#contenttop div.controlbar ul.drigg-order li a {font-size: 12px; color: #7a7a7a; margin-left: 6px; margin-right: 6px;
+padding-top:6px; float:left;}
+#contenttop div.controlbar ul.drigg-order li.active  { background:url(http://designbump.com/sites/all/themes/designbumpv3/img/bl.gif) no-repeat left top;
+height:32px; display:block; float:left; padding-left:10px; text-decoration:none;}
+#contenttop div.controlbar ul.drigg-order li.active a { background:url(http://designbump.com/sites/all/themes/designbumpv3/img/br.gif) no-repeat right top;
+display:block; padding:6px 10px 0 0; display:block; height:26px; float:left; margin:0;}
+#contenttop div.controlbar ul.drigg-order li.active a:hover {text-decoration:none;}
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}/* Clearfix */
+.clearfix {#display: inline-block; _height: 1px;}/* Clearfix */
+/* Hide from IE Mac \*/.clearfix { display: block; }/* End hide from IE Mac */
+/*  Front Page Main Content */
+#mission {background: #d33d58; padding: 10px; color:#fff; margin: 5px 0 0 0;}
+#mission a {font-weight:bold;}
+.status {background: #74a09f; padding: 10px; color:#fff; margin: 5px 0 5px 0;}
+.status a {color:#fff;}
+#contentbase{padding:0; margin: 6px 0 0 0;}
+#contentbase .item-list .pager{margin: 25px 0 15px 0;}
+#contentbase .item-list .pager li{border: 1px solid #74a09f; padding: 3px; margin: 0 2px;  font-size:14px;}
+.pager li a {color: #74a09f;}
+#contentbase .item-list .pager li.pager-current{background-color:#74a09f; color: #fff; font-weight:normal;}
+/* Footer styles */
+#topbg {clear:both; float:left; width:100%; height:13px; background: url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat 0px -757px;}
+#footer {clear:both; float:left; width:100%; height:30px; background: url(http://designbump.com/sites/all/themes/designbumpv3/img/imagebase.png) no-repeat 0px -770px;}
+/* column container */
+.colmask {position:relative;/* This fixes the IE7 overflow hidden bug */clear:both;float:left;width:100%;/* width of whole page */overflow:hidden;/* This chops off any overhanging divs */}
+/* common column settings */
+.colright,.colmid,.colleft {float:left;	width:100%;	/* width of page */	position:relative;}
+.col1,.col2,.col3 {float:left;position:relative;padding:0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead; only padding top and bottom is included here, make it whatever value you need */overflow:hidden;}
+/* 3 Column settings */
+.threecol {background-image: url(http://designbump.com/sites/all/themes/designbumpv3/img/ftrightbgmain.png); background-repeat: repeat-y; background-position: right;/* right column background colour */}
+.threecol .colmid {	right:315px;/* total width of the right column */background:#f0f0f0;/* center column background colour */}
+.threecol .colleft {right:307px;/* total width of the middle column */background-image: url(http://designbump.com/sites/all/themes/designbumpv3/img/ftleftbgmain.png); background-repeat: repeat-y; background-position: right;	/* left column background colour */}
+.threecol .col1 {width:269px;/* width of center column content (column width minus padding on either side) */left:980px;/* 100% plus left padding of center column */}
+.threecol .col2 {width:340px;/* Width of left column content (column width minus padding on either side) */left:353px;/* width of (right column) plus (center column left and right padding) plus (left column left padding) */}
+.threecol .col3 {width:245px;/* Width of right column content (column width minus padding on either side) */left:695px;/* Please make note of the brackets here:(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */}

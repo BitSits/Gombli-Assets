@@ -1,0 +1,16 @@
+x2_ad_cl = "3008";
+x2_ad_se = "http://www.tumri.net";
+x2_lo_id = "107105";
+x2_ad_ty = "leaderboard";
+x2_height = "90";
+x2_width = "728";
+x2_bu_id = "direct;wi.728;hi.90";
+x2_ad_id = "128599682";
+x2_si_id = "170431635";
+x2_t1 = ",170431635";
+x2_t2 = ",170431635";
+x2_f3 = ",170431635";
+x2_im_be = "http://view.atdmt.com/action/COCC_Tumri_ImpID_CreativeID/v3/timpid.^(t_td_isn)/tccid.^(t_td_pid)/aasa.170431635/aaai.128599682";
+x2_cl_tr = "http://ad.doubleclick.net/click%3Bh=v8/38cf/3/0/%2a/q%3B217687540%3B0-0%3B0%3B16726208%3B3454-728/90%3B33135752/33153629/1%3Bu%3D00g3iga15aqfoq|29%3B%7Eokv%3D%3Bdc_slot%3D17393%3Bsz%3D728x90%3B%7Eaopt%3D2/ff/5/ff%3B%7Efdr%3D218817070%3B0-0%3B0%3B8078307%3B3454-728/90%3B33762479/33780357/1%3Bu%3D00g3iga15aqfoq|29%3B%7Eokv%3D%3Bpc%3D1%3Bsvc%3D%3Bsite%3Danimation%3Bt%3D29%3Bbt%3D0%3Bbts%3D0%3Bauc%3D1%3Bfd%3D1%3Bfs%3D0%3Bsp2%3D0%3Bgo%3D9%3Ba%3D%3Bkw%3Dflash+tutorial+animate+walking%3Bchan%3Dcompute%3Bsyn%3Dabout%3Btile%3D1%3Br%3D1%3Bu%3D00g3iga15aqfoq|29%3Bs%3DAMS_00337%3Bs%3DAMS_00488%3Bs%3DAMS_00493%3Bs%3DAMS_00497%3Bs%3DAMS_00513%3Bs%3DAMS_00516%3Bdcopt%3Dist%3Bsz%3D728x90%3Bdc_ref%3Dhttp%3A//animation.about.com/od/flashanimationtutorials/ss/flash29walkcycl.htm%3B%7Eaopt%3D6/1/ff/1%3B%7Esscs%3D%3fhttp://clk.atdmt.com/go/170431635/direct;wi.728;hi.90;ai.128599682;ct.1/01?href=";
+x2_TC_1 = "WWW_ZZZMM_BNUSCD_M1_TT_MT_FL_M5_BAN2";
+document.write( "<script type=\"text/javascript\"  src=\"http://www.tumri.net/ads/TumriAds.js\"><"+"/script>");

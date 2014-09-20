@@ -1,0 +1,93 @@
+------------------------ FRONT FACE ------------------------ 
+FACE - ellipse
+	width = height = 300
+	X = Y = center
+
+EYES - ellipse
+	width = height = 100
+	X = center +/- 60
+	Y = center - 40
+
+EARS - ellipse
+	width = height = 30
+	X = center +/- 140
+	Y = center - 40
+
+HAIR - rounded rectangle
+	width = 320
+	height = 420
+	X = Y = center (after bottom anchor is deleted)
+	
+	HORIZONTAL line
+	width = 300
+	height = 0
+	X = center
+	Y = center - 25 (eartop)
+	make zig-zag patterns using pen tool
+
+HAIRBAND TOP - ellipse
+	width = height = 150
+	X = Y = center
+
+HAIRBAND BOTTOM - ellipse
+	width = height = 150
+	X = center
+	Y = center - 40
+
+
+------------------------ SIDE FACE ------------------------ 
+FACE - ellipse
+	width = height = 300
+	X = Y = center
+
+EYES - ellipse
+	width = height = 100
+	X = center + 70
+	Y = center - 40
+
+EARS - ellipse
+	width = height = 30
+	X = center - 20
+	Y = center - 40
+
+NOSE - ellipse
+	width = 30
+	height = 20
+	X = center + 125
+	Y = center - 90 (eyes bottom)
+
+HAIR - rounded rectangle
+	width = 320
+	height = 420
+	X = Y = center (after bottom anchor is deleted)
+	
+	HORIZONTAL line
+	width = 300
+	height = 0
+	X = center + 125 (starting from eartop)
+	Y = center - 25 (eartop)
+	make zig-zag patterns using pen tool or use the front face hair
+
+	VERTICAL line
+	width = 0
+	height = anything
+	X = center - 20 (ear center)
+	Y = anywhere
+
+HAIRBAND TOP - ellipse
+	width = height = 300
+	X = intersection point of hairband top line with hair
+	Y = center
+	rotate : pivot - top anchor, 
+	hold the left anchor and move it hori till it reaches vert hair line
+
+HAIRBAND BOTTOM - ellipse
+	width = height = 300
+	X = intersection point of hairband top line with hair
+	Y = center - 40 (hairband bottom line)
+
+-----------------------------------------------------------------------------
+
+PALM - Rounded rectangle
+	width = height = 50
+	corner rad = 14

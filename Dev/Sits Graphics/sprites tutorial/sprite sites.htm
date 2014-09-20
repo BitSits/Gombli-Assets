@@ -1,0 +1,2008 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+	<title>NG BBS — Sprite Resources</title>
+	<link rel="stylesheet" href="sprite%20sites_files/ng_publish.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="sprite%20sites_files/iphone.css" type="text/css" media="only screen and (max-device-width: 480px)">
+	<link rel="stylesheet" href="sprite%20sites_files/print.css" type="text/css" media="print">
+	<!-- CSS -->
+
+	<script type="text/javascript" src="sprite%20sites_files/ng_publish.js"></script>
+	<script type="text/javascript" src="sprite%20sites_files/bbs.js"></script>
+
+
+	<script type="text/javascript">
+	// <![CDATA[
+		// ==================== Code for handling the AJAX login box ========================
+		// We're embedding this here, rather than in a .js, because we need to guarantee it's loaded just below
+
+		var u_cookie = 'NG_GG_username';
+		var pm_count_cookie_name = 'unread_PMs';
+		var unread_pm_count = null;
+		var page_is_dynamic = true;
+		var user_logged_in = false;
+
+		function ReturnCookie(this_name)
+		{
+			var parts = document.cookie.split(';');
+			var sub_parts;
+
+			for(var i=0; i<parts.length; i++) {
+				sub_parts = parts[i].split('=');
+
+				sub_parts[0] = sub_parts[0].replace(/\s/, '');
+
+				if(sub_parts[0] == this_name) {
+					return(unescape(sub_parts[1]));
+				}
+			}
+
+			// If we're here, we didn't find the cookie
+			return(null);
+		}
+
+		// Set cookies from JavaScript using this - swiped from http://www.dustindiaz.com/top-ten-javascript/
+		function SetCookie(name, value, expires)
+		{
+			if(typeof expires == 'undefined') {
+				expires = 0;
+			}
+
+			var today = new Date();
+			today.setTime(today.getTime());
+
+			if(expires) {
+				expires = expires * 1000 * 60 * 60 * 24;
+			}
+
+			var expires_date = new Date(today.getTime() + expires);
+
+			document.cookie = name + '=' + escape(value) + ((expires) ? ';expires='+expires_date.toGMTString() : '' ) + ';path=/;domain=.newgrounds.com';
+		}
+
+		function DivSwap(old_div_id, new_div_id)
+		{
+			var old_div = $(old_div_id);
+			var new_div = $(new_div_id);
+
+			if((old_div) && (new_div)) {
+				new_div.style.display = "block";
+				old_div.style.display = "none";
+			}
+		}
+
+		function IsSoftLoggedIn()
+		{
+			return((ReturnCookie(String.fromCharCode(118,109,107,49,100,117,53,108,56,109)) != null) || (ReturnCookie(String.fromCharCode(118,109,107,108,100,117,53,73,56,109)) != null));
+		}
+
+		function LoadLoginBox()
+		{
+			// Let's make sure the browser isn't preserving some weird state
+			if(!(typeof request_in_progress == 'undefined')) {
+				// This variable may not have been loaded yet, since it's coming from a .js file
+				request_in_progress = false;
+			}
+
+			// Always see if they've got a username cookie to put as a default value in the login box
+			var username = ReturnCookie(u_cookie);
+			if(username != null) {
+				$('lb_username').value = username;
+			}
+
+			// Also always check for a # of unread PMs, handed off from PHP
+			if(unread_pm_count != null) {
+				// Got a value, set it and store it in a cookie
+				SetUnreadPMCount(unread_pm_count);
+			} else {
+				// Didn't get a value.  See if we've got anything stored from before, in a cookie
+				var unread_pm_count_cookie = ReturnCookie(pm_count_cookie_name);
+
+				if((unread_pm_count_cookie != null) && (unread_pm_count_cookie > 0)) {
+					SetUnreadPMCount(unread_pm_count_cookie);
+				}
+			}
+
+			// Now swap in the appropriate box
+			if(!(IsSoftLoggedIn())) {
+				// They're not logged in, so show the login form
+				DivSwap('loginbox', 'loginbox_notloggedin');
+			} else {
+				// They are logged in, so show their account options
+				// Gotta do this here, so the username displays properly on page refreshes
+				SetLoggedInUsername(username);
+
+				DivSwap('loginbox', 'loginbox_loggedin');
+			}
+		}
+
+		function SetUnreadPMCount(value)
+		{
+			var new_count = '';
+			if(value > 0) {
+				new_count = ' (' + FormatNumber(value) + ')';
+			}
+
+			$('unread_pm_count_display').innerHTML = new_count;
+			SetCookie(pm_count_cookie_name, value);
+		}
+
+		function SetLoggedInUsername(name)
+		{
+			$('loginbox_username').innerHTML = '<a href="http://' + name.toLowerCase() + '.newgrounds.com/">' + name + '</a>';
+			$(username_fieldname).value = name;				// Also set the name in the login text field
+		}
+
+		/* disabled for now
+		document.observe('dom:loaded', function() {
+			new Ajax.Autocompleter('topsearch_terms', 'searchhint', '/ajax/searchsuggestion.php', {
+				onShow: function(e, u) {
+					$('topsuperbanner').style.visibility = 'hidden';
+					// Positioning is taken care of in CSS. Disregard the search element.
+					Effect.Appear(u,{duration:0.15});
+				},
+
+				onHide: function(e, u) {
+					$('topsuperbanner').style.visibility = 'visible';
+					new Effect.Fade(u,{duration:0.15});
+				},
+
+				minChars: 3,
+				frequency: 0.1,
+
+				callback: function(terms) {
+					return 'topsearch_terms=' + escape(terms.value) + '&topsearch_type=' + $F('topsearch_type');
+				}
+			});
+		});
+		*/
+
+		// assume ads are blocked until imported javascript tells us otherwise
+	// ]]>
+	</script>
+	<script type="text/javascript" src="sprite%20sites_files/checkabp.js"></script>
+
+	<link rel="shortcut icon" type="image/png" href="http://img.ngfiles.com/favicon.ico">
+
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	<meta name="viewport" content="width=780">
+</head><body>
+
+<div id="mainframe">
+	<div id="main">
+		<!-- SKINAD_OUTER -->
+		<div id="center">
+			<!-- SKINAD -->
+			<div id="banner">
+				<h1 class="ng"><a href="http://www.newgrounds.com/">Newgrounds.com — Everything, By Everyone.</a></h1>
+
+				<div id="wholeloginbox" class="loginbox">
+					<div style="display: none;" id="loginbox">
+						<strong class="status">Checking login status…</strong>
+					</div>
+					<div style="display: block;" id="loginbox_notloggedin" class="hidecode">
+						<form method="post" action="http://www.newgrounds.com/account/" id="loginboxform" onsubmit="AttemptLogin();return(false);">
+
+						<ul>
+							<li><a href="http://www.newgrounds.com/join">Not a member? SIGN UP!</a></li>
+							<li><input class="hiddensubmit" value="s" type="submit"><a href="http://www.newgrounds.com/join/forgot">Forgot login?</a></li>
+						</ul>
+
+						<p>
+							<strong>USERNAME:</strong>
+							<input name="lb_username" id="lb_username" maxlength="20" class="inputfield formtext" type="text">
+						</p>
+						<p>
+							<strong>PASSWORD:</strong>
+							<input name="lb_userpass" id="lb_userpass" maxlength="10" class="inputfield formtext" type="password">
+						</p>
+
+						<div id="loginbox_button">
+							<p class="save">
+								<input name="lb_remember" id="lb_remember" value="on" type="checkbox">
+								<a class="textclick" href="javascript:HandleClick('lb_remember');">Save Info!</a>
+							</p>
+							<span class="btn"><a href="javascript:AttemptLogin();">Jack In!&nbsp;&gt;</a></span>
+						</div>
+						<div id="loginbox_animation_login" class="hidecode">
+							<p class="save"><strong class="status">Logging in…</strong></p>
+						</div>
+
+						</form>
+					</div>
+					<div id="loginbox_loggedin" class="logged hidecode">
+						<div id="loginbox_loggedin_msg">
+							<strong class="status">Logged in as:<br><span id="loginbox_username">.</span></strong>
+						</div>
+						<div id="loginbox_animation_logout" class="hidecode">
+							<strong class="status">Logging out…</strong>
+						</div>
+						<span class="btn"><a href="http://www.newgrounds.com/pm/">Inbox<em id="unread_pm_count_display"></em></a></span>
+						<span class="btn"><a href="http://www.newgrounds.com/account/">My Account</a></span>
+						<span class="btn"><a href="http://www.newgrounds.com/account/logout" onclick="AttemptLogout();return(false);">Log Out</a></span>
+					</div>
+				</div>
+
+				<form method="get" id="search" action="#" onsubmit="RunSearch('topsearch', 'portal');return(false);">
+					<input id="topsearch_terms" size="12" class="search inputfield formtext" type="text">
+					<select id="topsearch_type" class="formtext pulldown">
+						<option value="title">Title&nbsp;&nbsp;</option>
+						<option value="author">Author&nbsp;&nbsp;</option>
+					</select>
+					<span class="btn"><a href="#" onclick="RunSearch('topsearch', 'portal');return(false);">Search!</a></span>
+				</form>
+				<div class="linkcomplete" id="searchhint"></div>
+			</div>
+			<div id="skyplane">
+				<a href="http://www.newgrounds.com/art">New art portal!</a>
+			</div>
+
+			<div id="nav-sub">
+				<dl>
+					<dd><a href="http://www.newgrounds.com/primer">About Newgrounds</a> |</dd>
+					<dd><a href="http://www.newgrounds.com/news/">Blogs</a> |</dd>
+					<dd><a href="http://www.newgrounds.com/chat/">Chat</a> |</dd>
+					<dd><a href="http://www.newgrounds.com/downloads/">Downloads</a> |</dd>
+					<dd><a href="http://www.newgrounds.com/lit/faq">Help / FAQ</a> |</dd>
+					<dd><a href="http://www.newgrounds.com/lit/">Lit</a> |</dd>
+					<dd><a href="http://www.newgrounds.com/mature/">Mature</a> |</dd>
+					<dd><a href="http://www.newgrounds.com/network/">Network</a> |</dd>
+					<dd><a href="http://www.newgrounds.com/rankings/">Rankings</a> |</dd>
+					<dd><a href="http://www.newgrounds.com/submit">Submit Content!</a></dd>
+				</dl>
+			</div>
+
+			<div id="nav-main">
+				<dl>
+					<dd id="flashportal"><a href="http://www.newgrounds.com/portal/">Flash Portal</a></dd>
+					<dd id="audioportal"><a href="http://www.newgrounds.com/audio/">Audio Portal</a></dd>
+					<dd id="artportal"><a href="http://www.newgrounds.com/art/">Art Portal</a></dd>
+					<dd id="games"><a href="http://www.newgrounds.com/game/">Games</a></dd>
+					<dd id="movies"><a href="http://www.newgrounds.com/movies/">Movies</a></dd>
+					<dd id="collections"><a href="http://www.newgrounds.com/collection/">Collections</a></dd>
+					<dd id="series"><a href="http://www.newgrounds.com/collection/series">Series</a></dd>
+					<dd id="forums"><a href="http://www.newgrounds.com/bbs/">Forums</a></dd>
+					<dd id="store"><a href="http://www.newgrounds.com/store/">Store</a></dd>
+				</dl>
+			</div>
+			<br clear="left">
+
+			<script type="text/javascript">
+			// <![CDATA[
+				LoadLoginBox();
+			// ]]>
+			</script>
+
+			<!-- USERBANNER -->
+
+			<div id="cont-out">
+				<div id="cont-mid">
+					<div id="cont">
+
+						<!-- NOAD -->
+						<div class="box adhead">
+							<div class="boxtop"><div></div></div>
+							<div class="boxl">
+								<div class="boxr">
+									<div class="boxm horzad">
+										<script type="text/javascript">
+// <![CDATA[ 
+addSwappableElement("<iframe src=\"http:\/\/ads.newgrounds.com\/ads.php?t=1&amp;s=et\" scrolling=\"no\" frameborder=\"0\" height=\"90\" width=\"728\" class=\"horzad\" id=\"topsuperbanner\"><\/iframe>", "wide", "bottomad");// ]]> 
+
+</script><div id="bottomad"></div>
+									</div>
+								</div>
+							</div>
+							<div class="boxbot"><div></div></div>
+						</div>
+						<br clear="left">
+
+						<!-- End of the top header include -->
+
+
+<div class="all">
+	<form name="mainform" action="#" id="mainform">
+	<div class="box title">
+		<div class="boxtop"><div></div></div>
+		<div class="boxl">
+			<div class="boxr">
+				<div class="boxm">
+					<div class="headsizer">
+						<div class="heading">
+							<h2 class="i-bbs">Forum Topic<strong class="gray">:</strong> <span>Sprite Resources</span></h2>
+							<div id="headingform">
+								<select name="forumsa" id="forumsa" onchange="ForumJump('a');" class="pulldown2 formtext">
+<option value="-1">Forum Jump</option>
+<option value="-1">&nbsp;&nbsp;&nbsp;&nbsp;— All Access —</option>
+<option value="1">General</option>
+<option value="3">Where is / How to?</option>
+<option value="2" selected="selected">Flash</option>
+<option value="4">Politics</option>
+<option value="7">Programming</option>
+<option value="10">Clubs &amp; Crews</option>
+<option value="13">Audio</option>
+<option value="14">Art</option>
+<option value="15">Video Games</option>
+<option value="-1">&nbsp;&nbsp;&nbsp;&nbsp;— Reply Only —</option>
+<option value="6">Network News</option>
+<option value="5">NG News</option>
+<option value="8">P-bot's Postings</option>
+</select>
+							</div>
+						</div>
+					</div>
+					<div class="bundle">
+						<ul class="bread">
+							<li><a href="http://www.newgrounds.com/">NG Home</a></li>
+							<li><a href="http://www.newgrounds.com/bbs/">Forums</a></li>
+							<li><a href="http://www.newgrounds.com/bbs/forum/2">Flash</a></li>
+							<li>Sprite Resources</li>
+
+													</ul>
+
+						<span class="gray">(54,080 views • <span id="bbsthread_reply_count">180 replies</span>)</span>
+					</div>
+					<div class="hr"><hr></div>
+					<div class="oneline">
+						<div class="right">
+																<span class="btn"><a href="http://www.newgrounds.com/bbs/post/topic/2">New Topic</a></span>
+								
+																<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Post Reply</a></span>
+														</div>
+						<div>
+							<p>
+								This topic is <strong class="yellow">7</strong> pages long.
+
+																	<span class="gray" id="bbsthread_navbar_a">[ <strong>1</strong> | <a href="http://www.newgrounds.com/bbs/topic/149949/2">2</a> | <a href="http://www.newgrounds.com/bbs/topic/149949/3">3</a> | <a href="http://www.newgrounds.com/bbs/topic/149949/4">4</a> | <a href="http://www.newgrounds.com/bbs/topic/149949/5">5</a> | <a href="http://www.newgrounds.com/bbs/topic/149949/6">6</a> | <a href="http://www.newgrounds.com/bbs/topic/149949/7">7</a> ]</span>
+															</p>
+
+								<span class="btn dead"><span>&lt;&lt;</span></span>
+		<span class="btn dead"><span>&lt;</span></span>
+		<span class="btn"><a href="http://www.newgrounds.com/bbs/topic/149949/2">&gt;</a></span>
+		<span class="btn"><a href="http://www.newgrounds.com/bbs/topic/149949/7">&gt;&gt;</a></span>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="boxbot"><div></div></div>
+	</div>
+
+	
+			<div id="bbspost2747500">
+		<div id="bbspost2747500_wrapper">
+		<div id="bbspost2747500_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2747500_heading">
+									<img src="sprite%20sites_files/emote-4.gif" alt="Shouting" width="22" height="22">
+									<h3><a href="http://different.newgrounds.com/">different</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://different.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/different">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/different">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2747500">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 7/17/04 01:36 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://different.newgrounds.com/"><img src="sprite%20sites_files/level35D.gif" alt="different" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">DARK</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 35</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>08<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>3,764</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2747500_post_text">
+																<p>As
+so many are intent on posting requests for sprites, I thought it would
+be a good idea to compile them all in one topic. I have a huge list of
+them :)</p>
+
+<p>Oh, and I sorted them all into different categories, how kind of me.</p>
+
+<p><b>MIXED SPRITE COLLECTIONS</b></p>
+
+<p><a href="http://www.elementgaming.simgames.net/" target="_blank">http://www.elementgaming.simgames.net/</a><br>
+<a href="http://www.emugifs.emuita.it/home.htm" target="_blank">http://www.emugifs.emuita.it/home.htm</a><br>
+<a href="http://www.explore-rpg.com/resources.htm" target="_blank">http://www.explore-rpg.com/resources.htm</a><br>
+<a href="http://fated-circle.com/" target="_blank">http://fated-circle.com/</a><br>
+<a href="http://www.fireball20xl.com/sprites.html" target="_blank">http://www.fireball20xl.com/sprites.html</a><br>
+<a href="http://flashstand.com/sprites.php?mode=main" target="_blank">http://flashstand.com/sprites.php?mode=main</a><br>
+<a href="http://www.gaminggroundzero.com/" target="_blank">http://www.gaminggroundzero.com/</a><br>
+<a href="http://www.gamingw.net/" target="_blank">http://www.gamingw.net/</a><br>
+<a href="http://www.gsarchives.net/" target="_blank">http://www.gsarchives.net/</a><br>
+<a href="http://www.molotov.nu/?page=graphics" target="_blank">http://www.molotov.nu/?page=graphics</a><br>
+<a href="http://pages.cthome.net/mnoni/webpage/spritesheets.html" target="_blank">http://pages.cthome.net/mnoni/webpage/spritesheets.html</a><br>
+<a href="http://www.panelmonkey.org/" target="_blank">http://www.panelmonkey.org/</a><br>
+<a href="http://rpgdragoon.2ya.com/" target="_blank">http://rpgdragoon.2ya.com/</a><br>
+<a href="http://www.rpginfinity.com/" target="_blank">http://www.rpginfinity.com/</a><br>
+<a href="http://www.rpg2knet.com/resources/" target="_blank">http://www.rpg2knet.com/resources/</a><br>
+<a href="http://tsgk.captainn.net/" target="_blank">http://tsgk.captainn.net/</a><br>
+<a href="http://www.sprite-town.tk/" target="_blank">http://www.sprite-town.tk/</a><br>
+<a href="http://www.odinsrealm.com/tatakau/" target="_blank">http://www.odinsrealm.com/tatakau/</a><br>
+<a href="http://www.vgws.com/" target="_blank">http://www.vgws.com/</a><br>
+<a href="http://www.gifsyndicate.com/" target="_blank">http://www.gifsyndicate.com/</a><br>
+<a href="http://www.deekman.cjb.net/" target="_blank">http://www.deekman.cjb.net/</a><br>
+<a href="http://www.psyguy.com/" target="_blank">http://www.psyguy.com/</a><br>
+<a href="http://www.bladeshotx.com/" target="_blank">http://www.bladeshotx.com/</a></p>
+
+<p><b>NINTENDO SPRITES</b></p>
+
+<p><a href="http://clik.to/ninsprites" target="_blank">http://clik.to/ninsprites</a><br>
+<a href="http://www.retrogamezone.co.uk/" target="_blank">http://www.retrogamezone.co.uk/</a><br>
+<a href="http://www.mindspring.com/%7Ehhkyl/vgames/sprites.htm" target="_blank">http://www.mindspring.com/~hhkyl/vgames/sprites.htm</a></p>
+
+<p><b>MARIO SPRITES</b></p>
+
+<p><a href="http://www.pipehouse.net/sprites.shtml" target="_blank">http://www.pipehouse.net/sprites.shtml</a><br>
+<a href="http://www.classicgaming.com/tmk/yellow.shtml" target="_blank">http://www.classicgaming.com/tmk/yellow.shtml</a></p>
+
+<p><b>SONIC SPRITES</b></p>
+
+<p><a href="http://sfghq.emulationzone.org/sprites/sprites.php" target="_blank">http://sfghq.emulationzone.org/sprites/sprites.php</a><br>
+<a href="http://www.sonic-gif.com/" target="_blank">http://www.sonic-gif.com/</a></p>
+
+<p><b>ZELDA SPRITES</b></p>
+
+<p><a href="http://www.zeldaresources.com/" target="_blank">http://www.zeldaresources.com/</a><br>
+<a href="http://www.melorasworld.com/zelda/" target="_blank">http://www.melorasworld.com/zelda/</a><br>
+<a href="http://www.purezc.com/" target="_blank">http://www.purezc.com/</a></p>
+
+<p><b>MEGAMAN SPRITES</b></p>
+
+<p><a href="http://www.planet-megaman.com/sprites/" target="_blank">http://www.planet-megaman.com/sprites/</a></p>
+
+<p><b>POKEMON SPRITES</b></p>
+
+<p><a href="http://www.pokeschool.com/videogames/rubysapphire/sprites/" target="_blank">http://www.pokeschool.com/videogames/rubysapphire/sprites/</a><br>
+<a href="http://pokevalley.com/ps/main.php?id=P-Icon" target="_blank">http://pokevalley.com/ps/main.php?id=P-Icon</a><br>
+<a href="http://www.serebii.net/" target="_blank">http://www.serebii.net/</a></p>
+
+<p>--END OF RESOURCES--</p>
+
+<p>There you go. If you need more, consult Google!</p>															</div>
+
+																									<div class="sig">
+										
+																					<p>we play iPhone, <a href="http://www.weplayiphone.com/">daily game reviews</a>, <a href="http://twitter.com/weplayiphone">twitter</a>.</p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2747697">
+		<div id="bbspost2747697_wrapper">
+		<div id="bbspost2747697_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2747697_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://agent-c.newgrounds.com/">Agent-C</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://agent-c.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/agent-c">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/agent-c">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2747697">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 7/17/04 02:19 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://agent-c.newgrounds.com/"><img src="sprite%20sites_files/level5N.gif" alt="Agent-C" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">NEUTRAL</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 05</a>
+								<p><span class="gray">Sign-Up:</span> <strong>05<span class="gray">/</span>04<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>100</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2747697_post_text">
+																<p>while we're on the topics of sprites could some one please review the one that i altered for a game i'm making</p>																<p>
+									<img src="sprite%20sites_files/ngbbs40f96dba260ce.gif" alt="Sprite Resources" id="bbspost_img_2747697" width="40" height="50">
+								</p>
+															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2754275">
+		<div id="bbspost2754275_wrapper">
+		<div id="bbspost2754275_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2754275_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://different.newgrounds.com/">different</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://different.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/different">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/different">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2754275">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 7/18/04 11:46 AM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://different.newgrounds.com/"><img src="sprite%20sites_files/level35D.gif" alt="different" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">DARK</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 35</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>08<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>3,764</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2754275_post_text">
+																<p>If you keep replying, then all the people looking for sprites will find them! If you think I've missed any, please post them! :)</p>															</div>
+
+																									<div class="sig">
+										
+																					<p>we play iPhone, <a href="http://www.weplayiphone.com/">daily game reviews</a>, <a href="http://twitter.com/weplayiphone">twitter</a>.</p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2755846">
+		<div id="bbspost2755846_wrapper">
+		<div id="bbspost2755846_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2755846_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://dartdragoon666.newgrounds.com/">DartDragoon666</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://dartdragoon666.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/dartdragoon666">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/dartdragoon666">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2755846">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 7/18/04 03:56 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://dartdragoon666.newgrounds.com/"><img src="sprite%20sites_files/level9N.gif" alt="DartDragoon666" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">NEUTRAL</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 09</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>29<span class="gray">/</span>03</strong></p>
+								<p><span class="gray">Posts:</span> <strong>161</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2755846_post_text">
+																<p>i got a site that u missed <a href="http://spriting.simgames.net/" target="_blank">http://spriting.simgames.net/</a></p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2755870">
+		<div id="bbspost2755870_wrapper">
+		<div id="bbspost2755870_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2755870_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://geoffclogan.newgrounds.com/">GeoffCLogan</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://geoffclogan.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/geoffclogan">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/geoffclogan">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2755870">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 7/18/04 03:59 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://geoffclogan.newgrounds.com/"><img src="sprite%20sites_files/level11L.gif" alt="GeoffCLogan" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">LIGHT</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 11</a>
+								<p><span class="gray">Sign-Up:</span> <strong>04<span class="gray">/</span>25<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>4,424</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2755870_post_text">
+																<p>Holy shit that's alot of sites! My god you must love sprites.</p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2756437">
+		<div id="bbspost2756437_wrapper">
+		<div id="bbspost2756437_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2756437_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://different.newgrounds.com/">different</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://different.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/different">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/different">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2756437">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 7/18/04 04:59 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://different.newgrounds.com/"><img src="sprite%20sites_files/level35D.gif" alt="different" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">DARK</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 35</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>08<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>3,764</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2756437_post_text">
+																<p>Darn, I thought I could edit my first post with more - I was going to add that site you suggested <b>DartDragoon666</b></p>
+
+<p>Anyway that seems like a cool resource too.</p>
+
+<p>Yeah, I've been in game dev with other programs (therefore needing a
+lot of sprites along the way!) and I want to try my hand at Flash dev.
+I had a look at some of the coding necessary to pull it off, and it
+looks scary. Fortunately I can learn syntax pretty quickly, and the
+code formatting is the same as some of the other dev programs I've
+tried.</p>															</div>
+
+																									<div class="sig">
+										
+																					<p>we play iPhone, <a href="http://www.weplayiphone.com/">daily game reviews</a>, <a href="http://twitter.com/weplayiphone">twitter</a>.</p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2944713">
+		<div id="bbspost2944713_wrapper">
+		<div id="bbspost2944713_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2944713_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://different.newgrounds.com/">different</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://different.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/different">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/different">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2944713">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/9/04 11:35 AM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://different.newgrounds.com/"><img src="sprite%20sites_files/level35D.gif" alt="different" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">DARK</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 35</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>08<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>3,764</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2944713_post_text">
+																<p>Anyone got any resources they want to add?</p>															</div>
+
+																									<div class="sig">
+										
+																					<p>we play iPhone, <a href="http://www.weplayiphone.com/">daily game reviews</a>, <a href="http://twitter.com/weplayiphone">twitter</a>.</p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2944895">
+		<div id="bbspost2944895_wrapper">
+		<div id="bbspost2944895_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2944895_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://sickoflash.newgrounds.com/">SickoFlash</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://sickoflash.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/sickoflash">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/sickoflash">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2944895">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/9/04 12:05 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://sickoflash.newgrounds.com/"><img src="sprite%20sites_files/level9E.gif" alt="SickoFlash" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">EVIL</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 09</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>17<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>816</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2944895_post_text">
+																<p>ive ben on rpg dev too!</p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2950000">
+		<div id="bbspost2950000_wrapper">
+		<div id="bbspost2950000_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2950000_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://dry-ice.newgrounds.com/">Dry-Ice</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://dry-ice.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/dry-ice">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/dry-ice">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2950000">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/9/04 11:09 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://dry-ice.newgrounds.com/"><img src="sprite%20sites_files/level16L.gif" alt="Dry-Ice" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">LIGHT</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 16</a>
+								<p><span class="gray">Sign-Up:</span> <strong>04<span class="gray">/</span>09<span class="gray">/</span>03</strong></p>
+								<p><span class="gray">Posts:</span> <strong>9,509</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2950000_post_text">
+																<p>Just thought I'd Bump this, There's a Guy who is Bitching about SMW Sprites.</p>															</div>
+
+																									<div class="sig">
+										
+																					<p><strong><a href="http://www.newgrounds.com/bbs/topic/991369">BBS Rules, Clarified.</a><br>
+Forum Moderator. Abuse on the BBS? <a href="http://www.newgrounds.com/pm/send/dry-ice">PM me.</a></strong></p>
+										
+																					<img src="sprite%20sites_files/494096.jpg" alt="BBS Signature" width="599" height="50">																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2950149">
+		<div id="bbspost2950149_wrapper">
+		<div id="bbspost2950149_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2950149_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://greatflash.newgrounds.com/">GreatFlash</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://greatflash.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/greatflash">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/greatflash">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2950149">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/9/04 11:32 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://greatflash.newgrounds.com/"><img src="sprite%20sites_files/level8N.gif" alt="GreatFlash" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">NEUTRAL</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 08</a>
+								<p><span class="gray">Sign-Up:</span> <strong>06<span class="gray">/</span>05<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>243</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2950149_post_text">
+																<p>thanks!</p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2962510">
+		<div id="bbspost2962510_wrapper">
+		<div id="bbspost2962510_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2962510_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://the-krazyman.newgrounds.com/">THE-KRAZYMAN</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://the-krazyman.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/the-krazyman">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/the-krazyman">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2962510">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 07:47 AM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://the-krazyman.newgrounds.com/"><img src="sprite%20sites_files/level9L.gif" alt="THE-KRAZYMAN" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">LIGHT</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 09</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>03<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>1,067</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2962510_post_text">
+																<p>thanks for the sprites.</p>																<p>
+									<img src="sprite%20sites_files/ngbbs411a07603bdd1.gif" alt="Sprite Resources" id="bbspost_img_2962510" width="200" height="60">
+								</p>
+															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2964428">
+		<div id="bbspost2964428_wrapper">
+		<div id="bbspost2964428_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2964428_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://kusosuke.newgrounds.com/">kusosuke</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://kusosuke.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/kusosuke">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/kusosuke">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2964428">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 01:11 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://kusosuke.newgrounds.com/"><img src="sprite%20sites_files/level12L.gif" alt="kusosuke" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">LIGHT</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 12</a>
+								<p><span class="gray">Sign-Up:</span> <strong>12<span class="gray">/</span>15<span class="gray">/</span>03</strong></p>
+								<p><span class="gray">Posts:</span> <strong>965</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2964428_post_text">
+																<p>erm, could u plz post a link to a site with good, large, sprite backgrounds? i would appreciate it very much.</p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2964469">
+		<div id="bbspost2964469_wrapper">
+		<div id="bbspost2964469_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2964469_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://kusosuke.newgrounds.com/">kusosuke</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://kusosuke.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/kusosuke">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/kusosuke">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2964469">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 01:15 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://kusosuke.newgrounds.com/"><img src="sprite%20sites_files/level12L.gif" alt="kusosuke" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">LIGHT</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 12</a>
+								<p><span class="gray">Sign-Up:</span> <strong>12<span class="gray">/</span>15<span class="gray">/</span>03</strong></p>
+								<p><span class="gray">Posts:</span> <strong>965</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2964469_post_text">
+																<p><a href="http://www.gsarchives.net/index2.php?category=all&amp;system=gameboyadvance&amp;letter=p" target="_blank">http://www.gsarchives.net/inde...em=gameboyadvance&amp;letter=p</a><br>
+<a href="http://www.panelmonkey.org/" target="_blank">www.panelmonkey.org</a><br>
+<a href="http://www.tsgk.captainn.net/" target="_blank">www.tsgk.captainn.net</a></p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2964500">
+		<div id="bbspost2964500_wrapper">
+		<div id="bbspost2964500_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2964500_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://different.newgrounds.com/">different</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://different.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/different">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/different">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2964500">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 01:19 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://different.newgrounds.com/"><img src="sprite%20sites_files/level35D.gif" alt="different" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">DARK</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 35</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>08<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>3,764</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2964500_post_text">
+																<p>^ Look harder next time, I already have those in my list.</p>															</div>
+
+																									<div class="sig">
+										
+																					<p>we play iPhone, <a href="http://www.weplayiphone.com/">daily game reviews</a>, <a href="http://twitter.com/weplayiphone">twitter</a>.</p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2964543">
+		<div id="bbspost2964543_wrapper">
+		<div id="bbspost2964543_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2964543_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://kusosuke.newgrounds.com/">kusosuke</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://kusosuke.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/kusosuke">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/kusosuke">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2964543">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 01:25 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://kusosuke.newgrounds.com/"><img src="sprite%20sites_files/level12L.gif" alt="kusosuke" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">LIGHT</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 12</a>
+								<p><span class="gray">Sign-Up:</span> <strong>12<span class="gray">/</span>15<span class="gray">/</span>03</strong></p>
+								<p><span class="gray">Posts:</span> <strong>965</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2964543_post_text">
+																<p>ya those are my favorites, and the ones i know off the top of my head.</p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2964592">
+		<div id="bbspost2964592_wrapper">
+		<div id="bbspost2964592_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2964592_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://different.newgrounds.com/">different</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://different.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/different">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/different">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2964592">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 01:32 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://different.newgrounds.com/"><img src="sprite%20sites_files/level35D.gif" alt="different" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">DARK</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 35</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>08<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>3,764</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2964592_post_text">
+																<p>Ok, these aren't really sprites, but are useful graphic resources:</p>
+
+<p><b>BACKGROUND TEXTURES</b></p>
+
+<p><a href="http://www.grsites.com/textures/" target="_blank">http://www.grsites.com/textures/</a><br>
+<a href="http://astronomy.swin.edu.au/%7Epbourke/texture/" target="_blank">http://astronomy.swin.edu.au/~pbourke/texture/</a><br>
+<a href="http://textures.forrest.cz/" target="_blank">http://textures.forrest.cz/</a><br>
+<a href="http://www.aaabackgrounds.com/" target="_blank">http://www.aaabackgrounds.com/</a><br>
+<a href="http://www.mayang.com/textures/" target="_blank">http://www.mayang.com/textures/</a><br>
+<a href="http://www.sfsu.edu/%7Ejtolson/textures/textures.htm" target="_blank">http://www.sfsu.edu/~jtolson/textures/textures.htm</a><br>
+<a href="http://www.absolutecross.com/graphics/textures/" target="_blank">http://www.absolutecross.com/graphics/textures/</a></p>															</div>
+
+																									<div class="sig">
+										
+																					<p>we play iPhone, <a href="http://www.weplayiphone.com/">daily game reviews</a>, <a href="http://twitter.com/weplayiphone">twitter</a>.</p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2965234">
+		<div id="bbspost2965234_wrapper">
+		<div id="bbspost2965234_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2965234_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://the-krazyman.newgrounds.com/">THE-KRAZYMAN</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://the-krazyman.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/the-krazyman">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/the-krazyman">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2965234">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 02:52 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://the-krazyman.newgrounds.com/"><img src="sprite%20sites_files/level9L.gif" alt="THE-KRAZYMAN" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">LIGHT</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 09</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>03<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>1,067</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2965234_post_text">
+																<p>good backgrounds thanks.</p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2965248">
+		<div id="bbspost2965248_wrapper">
+		<div id="bbspost2965248_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2965248_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://diki.newgrounds.com/">Diki</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://diki.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/diki">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/diki">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2965248">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 02:54 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://diki.newgrounds.com/"><img src="sprite%20sites_files/level13N.gif" alt="Diki" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">NEUTRAL</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 13</a>
+								<p><span class="gray">Sign-Up:</span> <strong>01<span class="gray">/</span>31<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>927</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2965248_post_text">
+																<p>Oh, sure, don't add my site.<br>
+<a href="http://www.eternalrpg.net/resources.php" target="_blank">http://www.eternalrpg.net/resources.php</a></p>
+
+<p>&lt;_&lt;<br>
+Ohwell, hope you enjoy all thoe sprites I have.</p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2965283">
+		<div id="bbspost2965283_wrapper">
+		<div id="bbspost2965283_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2965283_heading">
+									<img src="sprite%20sites_files/emote-1.gif" alt="Happy" width="22" height="22">
+									<h3><a href="http://kittens-r-gnarly.newgrounds.com/">kittens-r-gnarly</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://kittens-r-gnarly.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/kittens-r-gnarly">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/kittens-r-gnarly">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2965283">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 02:58 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://kittens-r-gnarly.newgrounds.com/"><img src="sprite%20sites_files/level7E.gif" alt="kittens-r-gnarly" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">EVIL</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 07</a>
+								<p><span class="gray">Sign-Up:</span> <strong>04<span class="gray">/</span>07<span class="gray">/</span>03</strong></p>
+								<p><span class="gray">Posts:</span> <strong>51</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2965283_post_text">
+																<p>thanks so much man...i am thinking about making my first flash sprite movie soon so these will come in handy if i do.</p>
+
+<p>thanks again</p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2965294">
+		<div id="bbspost2965294_wrapper">
+		<div id="bbspost2965294_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2965294_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://different.newgrounds.com/">different</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://different.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/different">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/different">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2965294">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 02:59 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://different.newgrounds.com/"><img src="sprite%20sites_files/level35D.gif" alt="different" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">DARK</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 35</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>08<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>3,764</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2965294_post_text">
+																<p>I
+am fairly new to NG, so users sites are still unfamiliar to me (i.e. I
+haven't heard of them yet!), so don't get upset if I don't add your
+resource. That's a brilliant resource though, nice job.</p>															</div>
+
+																									<div class="sig">
+										
+																					<p>we play iPhone, <a href="http://www.weplayiphone.com/">daily game reviews</a>, <a href="http://twitter.com/weplayiphone">twitter</a>.</p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2966085">
+		<div id="bbspost2966085_wrapper">
+		<div id="bbspost2966085_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2966085_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://deathcon7.newgrounds.com/">Deathcon7</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://deathcon7.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/deathcon7">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/deathcon7">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2966085">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 04:23 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://deathcon7.newgrounds.com/"><img src="sprite%20sites_files/level21N.gif" alt="Deathcon7" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">NEUTRAL</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 21</a>
+								<p><span class="gray">Sign-Up:</span> <strong>10<span class="gray">/</span>01<span class="gray">/</span>03</strong></p>
+								<p><span class="gray">Posts:</span> <strong>5,752</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2966085_post_text">
+																<p>Is
+it me, or is Different anybody else's favorite n00b? Why didn't I think
+of this? No more n00bs badgering about sprites now, yayz00r.</p>															</div>
+
+																									<div class="sig">
+										
+																					<p><a href="http://www.newgrounds.com/bbs/topic/229808/53">AS2: Main</a> | <a href="http://www.newgrounds.com/bbs/topic/695818/5">AS3: Main</a></p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2967613">
+		<div id="bbspost2967613_wrapper">
+		<div id="bbspost2967613_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2967613_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://bazi.newgrounds.com/">Bazi</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://bazi.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/bazi">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/bazi">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2967613">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/11/04 07:18 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://bazi.newgrounds.com/"><img src="sprite%20sites_files/level20F.gif" alt="Bazi" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">FAB</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 20</a>
+								<p><span class="gray">Sign-Up:</span> <strong>06<span class="gray">/</span>25<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>6,194</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2967613_post_text">
+																<p>thank u. no more complaining noobs. good idea.</p>															</div>
+
+																									<div class="sig">
+										
+																					<p>The fab king.<br>
+Used to be Darkness.<br>
+<a href="http://www.last.fm/user/bazii/">[last.fm]</a>|<a href="http://www.newgrounds.com/bbs/topic/312829">[Gym]</a>|<a href="http://www.newgrounds.com/bbs/topic/236137">[Hiphop]</a>|<a href="http://bazi.newgrounds.com/news/post/1103"><strong>[Fab Lounge]</strong></a></p>
+										
+																					<img src="sprite%20sites_files/892425.jpg" alt="BBS Signature" width="594" height="49">																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2972232">
+		<div id="bbspost2972232_wrapper">
+		<div id="bbspost2972232_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2972232_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://different.newgrounds.com/">different</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://different.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/different">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/different">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2972232">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/12/04 06:17 AM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://different.newgrounds.com/"><img src="sprite%20sites_files/level35D.gif" alt="different" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">DARK</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 35</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>08<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>3,764</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2972232_post_text">
+																<blockquote><span class="quotestamp">At 8/11/04 04:23 PM, Deathcon7 wrote:</span>
+Is it me, or is Different anybody else's favorite n00b? Why didn't I
+think of this? No more n00bs badgering about sprites now, yayz00r.</blockquote>
+
+<p>Contrary to the belief of many, a noob/n00b and a newbie/newb are
+not the same thing. Newbs are those who are new to some task and are
+crap at it, possibly a little overconfident about it, but they are
+willing to learn and fix their errors to move out of that stage. Noobs,
+on the other hand, know little and have no will to learn any more. They
+expect people to do the work for them and then expect to get praised
+about it, and make up a unique species of their own.</p>
+
+<p>Thanks for the compliment though :-)</p>															</div>
+
+																									<div class="sig">
+										
+																					<p>we play iPhone, <a href="http://www.weplayiphone.com/">daily game reviews</a>, <a href="http://twitter.com/weplayiphone">twitter</a>.</p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2973710">
+		<div id="bbspost2973710_wrapper">
+		<div id="bbspost2973710_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2973710_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://different.newgrounds.com/">different</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://different.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/different">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/different">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2973710">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/12/04 11:08 AM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://different.newgrounds.com/"><img src="sprite%20sites_files/level35D.gif" alt="different" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">DARK</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 35</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>08<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>3,764</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2973710_post_text">
+																<p>Another link, under Misc.</p>
+
+<p><a href="http://retrogaming.gamezone.de/specials/spritegifs/" target="_blank">http://retrogaming.gamezone.de/specials/spritegifs/</a></p>															</div>
+
+																									<div class="sig">
+										
+																					<p>we play iPhone, <a href="http://www.weplayiphone.com/">daily game reviews</a>, <a href="http://twitter.com/weplayiphone">twitter</a>.</p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2974528">
+		<div id="bbspost2974528_wrapper">
+		<div id="bbspost2974528_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2974528_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://binaryflow.newgrounds.com/">binaryflow</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://binaryflow.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/binaryflow">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/binaryflow">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2974528">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/12/04 01:04 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://binaryflow.newgrounds.com/"><img src="sprite%20sites_files/level8L.gif" alt="binaryflow" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">LIGHT</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 08</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>23<span class="gray">/</span>03</strong></p>
+								<p><span class="gray">Posts:</span> <strong>660</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2974528_post_text">
+																<p>why
+dont u make your own sprite site and include them all in one, since
+there are so many small sites with sprites, if u made a large one then
+it could become the main resource!</p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2974754">
+		<div id="bbspost2974754_wrapper">
+		<div id="bbspost2974754_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2974754_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://different.newgrounds.com/">different</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://different.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/different">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/different">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2974754">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/12/04 01:31 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://different.newgrounds.com/"><img src="sprite%20sites_files/level35D.gif" alt="different" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">DARK</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 35</a>
+								<p><span class="gray">Sign-Up:</span> <strong>07<span class="gray">/</span>08<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>3,764</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2974754_post_text">
+																<p>^</p>
+
+<p>Hmmm, uploading all those sprites into one megasite? I'd need a host
+that supported over 50GB of hosting, double that for bandwidth - and
+not to mention the time it would take doing that. You'll find most
+mario/sonic spritesheets don't vary much from site to site anyway...
+Plus some of the resources mentioned may have put their own copyright.
+I'd do it if someone payed me a huge amount of money though ;-)</p>															</div>
+
+																									<div class="sig">
+										
+																					<p>we play iPhone, <a href="http://www.weplayiphone.com/">daily game reviews</a>, <a href="http://twitter.com/weplayiphone">twitter</a>.</p>
+										
+																			</div>
+									
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2974954">
+		<div id="bbspost2974954_wrapper">
+		<div id="bbspost2974954_wrapper_inner">
+		<div class="box title post">
+			<div class="boxtop"><div></div><span></span></div>
+				<div class="boxl">
+					<div class="boxr">
+						<div class="boxm">
+							<div class="headsizer">
+								<div class="heading" id="bbspost2974954_heading">
+									<img src="sprite%20sites_files/emote-6.gif" alt="None" width="22" height="22">
+									<h3><a href="http://diki.newgrounds.com/">Diki</a></h3>
+
+																			<p class="userlinks large">
+																							[
+													<a href="http://diki.newgrounds.com/">Profile</a> |
+													<a href="http://www.newgrounds.com/bbs/search/author/diki">Posts</a>
+																											| <a href="http://www.newgrounds.com/pm/send/diki">Contact</a>																									]
+											
+																					</p>
+									
+																														<span class="btn"><a href="http://www.newgrounds.com/bbs/post/reply/149949">Reply To Post</a></span>
+											<span class="btn"><a href="http://www.newgrounds.com/bbs/post/quote/2974954">Reply &amp; Quote</a></span>
+																			
+									<p>Posted at: 8/12/04 01:54 PM</p>
+								</div>
+						</div>
+						<div class="userstats">
+															
+								<a href="http://diki.newgrounds.com/"><img src="sprite%20sites_files/level13N.gif" alt="Diki" width="100" height="100"></a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_aura" class="right">NEUTRAL</a>
+								<a href="http://www.newgrounds.com/lit/faq#upa_rank">LEVEL 13</a>
+								<p><span class="gray">Sign-Up:</span> <strong>01<span class="gray">/</span>31<span class="gray">/</span>04</strong></p>
+								<p><span class="gray">Posts:</span> <strong>927</strong></p>
+													</div>
+
+						<div class="message">
+							<div class="nosig" id="bbspost2974954_post_text">
+																<blockquote><span class="quotestamp">At 8/12/04 01:04 PM, BiNaryFlow wrote:</span>
+why dont u make your own sprite site and include them all in one, since
+there are so many small sites with sprites, if u made a large one then
+it could become the main resource!</blockquote>
+
+<p>One word: <i>plagerism</i></p>															</div>
+
+							
+						
+						</div>
+						<br clear="left">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="boxbot"><div></div><span></span></div>
+		</div>
+		</div>
+		</div>
+		</div>
+				<div id="bbspost2975446">
+		<div id="bbspost2975446_wrapper">
+		<div id="bb0"></div></div></div></form></div></div></div></div></div></div></div></body></html>

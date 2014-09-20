@@ -1,0 +1,947 @@
+/*browser defaults reset*/
+ul { list-style:none; }
+dl,dt,dd,ul,ol,li,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input { margin:0; padding:0; }
+
+/* body {background:#fff url(/design-images/pageback2.jpg) top repeat-x;
+} */
+
+body {text-align:center;
+}
+.txtblack {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	line-height: 14px;
+    font-weight: normal;
+}
+
+#wrapper {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	width: 1000px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+	/*background:transparent url(/design-images/wrap-back.jpg) no-repeat top; */
+}
+#header {padding-left:83px;
+height: 145px;
+color: #FFFFFF;}
+
+#headerwrap{display:inline;height:74px;}
+#logo{
+	float:left;
+	width:250px;
+	height: 86px;
+}
+#logo a img{border:0;text-decoration:none;}
+#search{
+	float:left;
+	width:265px;
+	float:left;
+	margin-left: 33px;padding-top:28px;
+}
+/* #HeadRightNav{width:158px;padding-top:39px;} */
+#HeadRightNav ul {}
+#HeadRightNav li {display:inline;padding-left:13px; }
+#HeadRightNav li a { text-decoration:none;background-color:transparent;color:#333;font-size:0.85em;}
+// #HeadRightNav li a { color:#0066CC;font-weight:bold;text-decoration:none;font-size:0.85em;text-decoration:underline;}
+#HeadRightNav li a:hover{color:#025CA8;text-decoration:underline;}
+#HeadRightNav li.userlogin {background:url(/design-images/li-login-bk.jpg) no-repeat left;}
+#HeadRightNav li.register {background:url(/design-images/li-register-bk.jpg) no-repeat left;}
+#HeadRightNav li.profile {background:url(/design-images/li-user-bk.jpg) no-repeat left;}
+#HeadRightNav li.sitemap {background:url(/design-images/sitemap.png) no-repeat left;}
+#HeadRightNav li.newsletter {background:url(/design-images/newsletter.gif) no-repeat left;}
+
+
+#AdminPanel{border:1px solid red;background-color:#FFFFCC;color:#003300;width:350px;padding:4px;margin:8px;position:relative;left:100px;}
+#AdminPanel em {font-weight:bold;margin:3px;font-style:normal;}
+
+#TopBanner {text-align:center; margin:-6px 0px 10px 0px;}
+
+#LeftColumn {
+	float: left;
+	background-color: white;
+	width:200px;
+	margin-right:6px;
+	margin-bottom: 10px;
+
+}
+
+#CenterColumn {
+	background-color: #FFFFFF;
+	float: left;
+width:640px;margin-right:0px;
+}
+
+
+#RightColumn {
+	background-color: #FFFFFF;
+	float: left;
+	width: 180px;}
+	
+	
+	/*RightColumn Block Content*/
+.Rblock {width:160px;}
+.Rblockcontent {width:155px;margin:0;padding:0;font-size:0.9em;}
+.Rblocktitle{
+	background:url(/design-images/right-column-title-bk.jpg) no-repeat top left;
+	height:31px;
+	line-height:31px;
+	padding-left:10px;
+	color:#585858;
+	font-weight:900;
+	font-size:0.95em;
+	letter-spacing: 0em;
+}
+
+.Rblockcontent ul.news {margin-top:7px; margin:0;padding:0;border-bottom:1px solid #DEDEDE; padding-left:9px;}
+.Rblockcontent ul.news li {padding:0;margin:0;color:#484848;font-family:Arial, Helvetica, sans-serif;border-bottom:1px solid #DEDEDE;padding-top:8px;padding-bottom:8px;}
+
+.Rblockcontent ul.stats {margin:0;padding:0;padding-left:9px;}
+.Rblockcontent ul.stats li {padding:0;margin:0;color:#484848;font-family:Arial, Helvetica, sans-serif;padding-bottom:3px;}
+.Rblockcontent ul.stats em {color:#005AA8;font-style:normal;}
+
+#SkyScraper { text-align:center; }
+
+.postedby {font-size:0.80em;}
+.poster a {color:#76A904;}
+
+.rComments{padding-left:19px;background:url(/design-images/links/tut-comments.jpg) no-repeat left;} 
+.rComments a{height:13px;line-height:13px;color:#005AA8;}
+.newslink{background:url(/design-images/links/new-item-bk.jpg) no-repeat top left;padding-left:12px;}
+.newslink a {color:#005AA8;font-weight:bold;}
+
+.Rblockcontent ul.news li p {padding-bottom:3px;}
+
+.morenews {height:12px; line-height:12px; background:url(/design-images/links/more-news.jpg) no-repeat left;}
+.morenews a {color:#838383;padding-left:13px;}
+.Rblockcontent ul.news li a:hover{color:#76A904;}
+.clearer {
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+}
+
+
+#contentWrap {padding:0;margin:0;
+	width: 1033px;
+	_width: 1039px;
+	background-color: #FFFFFF;
+	margin-left: 0px; 
+}
+
+
+
+#navigationWrap{
+	clear:both;
+	margin: 0px;
+	padding: 0px;
+	height:23px;
+	float:left;
+	padding-left:268px;
+	margin-top: 5px;
+}
+#MainNav {
+	list-style-type: none;width:520px;}
+#MainNav li {text-align:center;float:left;height:23px;line-height:23px;display:inline;width:100px;}
+
+#MainNav a {text-decoration:none;font-weight:bold;height:23px;line-height:23px;text-transform:uppercase;font-size:0.90em;color:#014694;}
+#MainNav a:hover {color:#76A904}
+
+#MainNav .submit{}
+#MainNav .forum {}
+#MainNav .faq {}
+#MainNav .contacts {padding-left:3px;}
+#MainNav .advertise {padding-left:5px;}
+
+/*specifics*/
+
+/*leftblockcontent*/
+.Lblock {width:200px;}
+.Lblocktitle{
+	background:url(/design-images/block-title-bk.jpg) no-repeat top;
+	height:31px;
+	line-height:31px;
+	padding-left:13px;
+	color:#585858;
+	font-weight:900;
+	font-size:0.95em;
+	letter-spacing: 0em;
+}
+.Lblockcontent ul {margin-top:7px; margin:0;padding:0;width:185px;padding-left:9px; }
+.Lblockcontent ul li {padding:0;height:20px; line-height:20px; padding-left:20px;color:#484848;font-family:Arial, Helvetica, sans-serif;}
+.Lblockcontent2 ul li {padding:0;height:20px; line-height:25px;padding-top:1px;padding-bottom:5px; padding-left:20px;color:#484848;font-family:Arial, Helvetica, sans-serif;}
+/*simply change these to an 'a class' if you have trouble outputting as unordered list*/
+.Lblockcontent ul li.odd2 {background:#f8f8f8 no-repeat left;border-top:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;}
+.Lblockcontent ul li.even2 {background:#fff no-repeat left;}
+.Lblockcontent ul li.even3 {padding-top:2px;padding-bottom:5px;background:#fff no-repeat left;}
+.Lblockcontent ul li.odd {background:#f8f8f8 url(/design-images/left-li-bacl-odd.jpg) no-repeat left;border-top:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;}
+.Lblockcontent ul li.even {background:#fff url(/design-images/left-li-bac-even.jpg)
+no-repeat left;}
+.Lblockcontent ul li a { text-decoration:none;background-color:transparent;color:#333;font-size:0.95em;}
+/*amount # in parentesis)*/
+.Lblockcontent ul li a:hover{color:#025CA8;text-decoration:underline;}
+.Lblockcontent ul li span{color:#025CA8;font-size:0.95em;}
+.Lblockcontent ul li.userlogin {background:url(/design-images/li-login-bk.jpg) no-repeat left;}
+.Lblockcontent ul li.register {background:url(/design-images/li-register-bk.jpg) no-repeat left;}
+.Lblockcontent ul li.profile {background:url(/design-images/li-user-bk.jpg) no-repeat left;}
+.Lblockcontent ul li.sitemap {background:url(/design-images/sitemap.png) no-repeat left;}
+.Lblockcontent ul li.newsletter {background:url(/design-images/newsletter.gif) no-repeat left;}
+/*end leftblock*/
+
+
+/*Searchbox header*/
+#topsearch {padding:0;margin:0;}
+#topsearch form {
+    margin: 0;
+    padding: 0;float:left;}
+
+#topsearch select{float:left;height:19px;font-size:0.85em;line-height:19px;border:1px solid #427CBC;width:118px;margin-right:3px;padding-left:5px;}
+
+#tosearch textarea {margin:0;padding:0;}
+#topsearch input
+{margin:0;padding:0;height:19px;line-height:19px;width:110px;border:1px solid #427CBC;font-size:0.85em;float:left;margin-right:3px;padding-left:5px;}
+#topsearch input.search{float:left;width:20px;padding:0;border:0;margin:0;
+	height:20px}
+
+#CenterColumn p {color:#454344;font-size:.85em;letter-spacing:0.0em;}
+/*centercolumnBlocks
+Featured block first*/
+#CFContent{height:auto;}      
+#Featured{}
+#Featured .CFtitle{background:url(http://images.devshed.com/tut/tutorialized-bckgtit2.gif) no-repeat top; height:31px;line-height:31px;padding-left:13px;padding-top:1px;margin-bottom:2px;}
+.CFtitle h2 {margin:0;padding:0;font-size:0.95em;color:#585858;}
+
+.featuredDes /*desciption area*/
+{float:left;width:605px;padding-top:16px;padding-right:5px;background-color:#F2F5FA;}
+.featuredDes .imageclmn{float:left;width:141px;padding-left:15px;padding-bottom:18px;}
+.featuredDes .summary {float:left;width:273px;}
+.featuredDes p span.title{padding-left:19px;font-size:1.1em;font-weight:bold;background:url(/design-images/links/featured-bk.jpg) no-repeat left;line-height:20px;} 
+.featuredDes p a{color:#76A904;}
+.featuredDes p a:hover{color:#333;}
+/*link section of featured block*/
+
+
+.featuredDes ul.details{border-top:1px solid #D2D5DA;clear:left;margin-top:7px;padding-top:7px;padding-left:28px;background:url(/design-images/links/view-proj.jpg) no-repeat left top;height:32px;width:auto;}
+.featuredDes ul.details li {height:28px;display:inline;height:13px;float:left;line-height:13px;color:#87888C;}
+.featuredDes ul.details li.Fview a{display:block;border-right:1px dotted #8A8E91;padding-right:5px;padding-left:2px;color:#015BA9;}
+
+
+.featuredDes ul.details li.Fcomments{background:url(/design-images/links/fcomments.jpg) no-repeat left;}
+.featuredDes ul.details li.Fcomments a{padding-left:19px;display:block;border-right:1px dotted #8A8E91;color:#015BA9;padding-right:5px;}
+.featuredDes ul.details li.Fposted {padding-left:5px;display:block;float:left;}
+.featuredDes ul.details li.Fposted a{color:#76A902;padding-left:4px;padding-right:5px;font-weight:bold;letter-spacing:0.15em;border-right:1px dotted #8A8E91;}
+.featuredDes ul.details li.Fposted a:hover{color:red;}
+
+.featuredDes ul.details li.Fsuggest {padding-left:5px;display:block;float:left;}
+.featuredDes ul.details li.Fsuggest a{color:#76A902;padding-left:0px;font-weight:bold;letter-spacing:0.15em;}
+.featuredDes ul.details li.Fsuggest a:hover{color:red;}
+
+.featuredDes ul.details li a{font-size:.80em;}
+
+/*End featured block and summar, begin link ads*/
+/*+ ads etc.*/
+
+#Featured dl{clear:both;padding-top:20px;width:630px;}
+#Featured dt{height:20px;border-bottom:#d5d5d5 1px solid;clear:left;background:#F3F3F3 url(/design-images/dt-back.jpg) no-repeat left;padding-left:19px;color:#87888C;line-height:20px;font-size:0.90em;}
+#Featured dt span a{color:#015BA9;padding-left:6px;text-transform:none;}
+#Featured dd{padding-top:10px;}
+#Featured dd p img {padding:0px 10px 10px 0px;float:left;}
+
+/*begin news/tutorial sections*/
+ 
+.Cblock{clear:both;}
+.Cblocktitle{background:url(http://images.devshed.com/tut/tutorialized-bckgtit2.gif) no-repeat; height:31px;line-height:31px;padding-left:12px;margin-bottom:0px;font-weight:bold;color:#666666;}
+
+.Cblocktitle h2{margin:0;padding:0;font-size:0.95em;color:#585858;}
+.Ccontent{width:610px;}
+/*.Ccontent dl#tutorials {clear:both;padding-top:5px;}*/
+.Ccontent #tutorials dt{height:20px;border-bottom:#d5d5d5 1px solid;clear:left;background:#F3F3F3 url(/design-images/dt-back.jpg) no-repeat left;padding-left:19px;line-height:20px;font-size:0.90em;color:#484848;}
+.Ccontent #tutorials dd{padding-top:0px;}
+.Ccontent #tutorials dt a/*the story category title + link*/{color:#005AA8; padding-left:6px;text-transform:none;text-decoration:none;}
+
+/*for most popular listing of tutorials on same page*/
+.Ccontent #tutorialspop dt{height:20px;border-bottom:#d5d5d5 1px solid;clear:left;background:#F3F3F3 url(/design-images/dt-back.jpg) no-repeat left;padding-left:19px;line-height:20px;font-size:0.90em;color:#484848;}
+.Ccontent #tutorialspop dd{padding-top:10px;}
+.Ccontent #tutorialspop dt a/*the story category title + link*/{color:#005AA8; padding-left:6px;text-transform:none;text-decoration:none;}
+/*end extra*/
+
+/*begin custom tutorial code*/
+.tutorialWrap /*description area*/
+{float:left;width:610px;margin-bottom:16px;}
+.tutorialWrap .imageclmn{float:left;width:52px;padding-right:15px;padding-bottom:10px;}
+.tutorialWrap .TutSummary {float:left;width:390px;}
+ p a.TutTitle{color:#484848;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:1em;font-weight:bold;line-height:15px;}
+ a:hover.TutTitle{color:#76A904;}
+.tutorialWrap2 /*description area*/
+{float:left;width:610px;margin-bottom:16px;}
+.tutorialWrap2 .imageclmn{float:left;width:52px;padding-right:15px;padding-bottom:10px;}
+.tutorialWrap2 .TutSummary {float:left;width:90px;line-height:15px;}
+.tutorialWrap2 .TutRankings {float:left;width:90px;line-height:18px;}
+.tutorialWrap2 .TutDesc {float:left;padding-right:10px;width:350px;}
+ p a.TutTitle{color:#484848;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:1em;font-weight:bold;line-height:15px;}
+ a:hover.TutTitle{color:#76A904;}
+/*.tutorialWrap2 ul {margin-top:7px; margin:0;padding:0;width:180px;padding-left:9px; } */
+/*.tutorialWrap2 ul li {padding:0;height:20px; line-height:20px; padding-left:20px;color:#484848;font-family:Arial, Helvetica, sans-serif;} */
+
+/*amount # in parentesis)*/
+.tutorialWrap ul.Tutlinks2{clear:left;padding-top:8px;border-top:#d5d5d5 solid 1px;margin-top:8px;}
+.tutorialWrap ul.Tutlinks2 li {padding:0;margin:0;float:left;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #333333;	text-decoration: none;line-height: 12px;}
+
+.tutorialWrap ul.Tutlinks2 li a:hover{color:#76A904;}
+.tutorialWrap2  ul.Tutlinks2 li.TutHits {background:url(/design-images/links/hits.jpg) no-repeat left;}
+.tutorialWrap2  ul.Tutlinks2 li.TutHits span {border-right:1px dotted #8A8E91;padding-right:6px;padding-left:13px;color:#484848;}
+.tutorialWrap2  ul.Tutlinks2 li.Tutcomments {background:url(/design-images/links/tut-comments.jpg) no-repeat left;margin-left:5px;}
+.tutorialWrap2  ul.Tutlinks2 li.Tutcomments a{padding-left:20px;border-right:1px dotted #8A8E91;color:#015BA9;padding-right:10px;cursor: pointer;}
+.tutorialWrap2  ul.Tutlinks2 li.Tutcomments a:hover{color:#015BA9;background-color:transparent;}
+
+.tutorialWrap2  ul.Tutlinks2 li.Tutrating{line-height:12px;float:left;padding-left:6px;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #333333;text-decoration: none;padding-right:10px;}
+
+.tutorialWrap2  ul.Tutlinks2 li.Tutrating .rated {padding-right:5px;}
+.tutorialWrap2  ul.Tutlinks2 li.Tutrating span {float:left;}
+.tutorialWrap2 ul li.TutVotes{border-left:1px dotted #8A8E91;padding-left:5px;}
+.tutorialWrap2 ul li.BrokenLink {background:url(/design-images/links/broken-link.jpg) no-repeat left; padding-left:18px;color:#005AA8;height:14px;line-height:12px;float:right;}
+ /*begin custom tutorial code for page itself*/
+.tutorialPrap /*desciption area*/
+{float:left;width:610px;margin-bottom:16px;}
+.tutorialPrap .imageclmn{float:right;width:52px;padding-left:10px;padding-right:10px;padding-bottom:10px;}
+.tutorialPrap .TutSummary {float:left;width:380px;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:1em;font-weight:bold;line-height:15px;}
+
+/*search forum -discuss*/
+#viewtut{clear:both;background-color:#2B98DB;margin-bottom:10px;padding:1px;text-align:center;}
+#viewtut .clicktut{border:solid 1px #86C1E9;padding:7px;text-align:center;}
+.clicktut a{color:white;height:27px;line-height:27px;display:block;width:610px;font-weight:bold;margin-left:auto;margin-right:auto;}
+.clicktut a:hover {color:yellow;} 
+ 
+ 
+/*link section of tutorial block*/
+.tutorialWrap ul.Tutlinks{clear:left;padding-top:8px;border-top:#d5d5d5 solid 1px;margin-top:8px;}
+.tutorialWrap ul.Tutlinks li {padding:0;margin:0;display:inline;float:left;line-height:12px;color:#484848;font-size:.80em; height:12px;}
+
+.tutorialWrap ul.Tutlinks li a:hover{color:#76A904;}
+.tutorialWrap  ul.Tutlinks li.TutHits {background:url(/design-images/links/hits.jpg) no-repeat left;}
+.tutorialWrap  ul.Tutlinks li.TutHits span {border-right:1px dotted #8A8E91;padding-right:6px;padding-left:13px;color:#484848;}
+.tutorialWrap  ul.Tutlinks li.Tutcomments {background:url(/design-images/links/tut-comments.jpg) no-repeat left;margin-left:5px;}
+.tutorialWrap  ul.Tutlinks li.Tutcomments a{padding-left:20px;border-right:1px dotted #8A8E91;color:#015BA9;padding-right:10px;cursor: pointer;}
+.tutorialWrap  ul.Tutlinks li.Tutcomments a:hover{color:#015BA9;background-color:transparent;}
+
+.tutorialWrap  ul.Tutlinks li.Tutrating{line-height:12px;float:left;padding-left:6px;color:#015BA9;padding-right:10px;}
+
+.tutorialWrap  ul.Tutlinks li.Tutrating .rated {padding-right:5px;}
+.tutorialWrap  ul.Tutlinks li.Tutrating span {float:left;}
+/*individual ratings style if needed*/
+.one{}
+.zero{}
+.half{}
+/*end*/
+.tutorialWrap ul li.TutVotes{border-left:1px dotted #8A8E91;padding-left:5px;}
+.tutorialWrap ul li.BrokenLink {background:url(/design-images/links/broken-link.jpg) no-repeat left; padding-left:18px;color:#005AA8;height:14px;line-height:12px;float:right;}
+
+
+
+
+.BrokenLink a{color:#005AA8;}
+
+
+/*lowestpart of page*/
+.lowerBanner {
+	clear: both;
+	height:110px;
+	border-top:2px solid #BCBCBC;
+	width: 784px;
+	padding-top: 10px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+.lowerBanner img{
+	margin-right:auto;
+	margin-left: 28px!important;margin-left:0;
+}
+	
+	
+#footer {	border-top:2px solid #BCBCBC;
+	height: 68px;
+	clear: both;text-align:center;
+	font-size: 0.8em;
+	background-color:#f1f1f1;font-family:Arial, Helvetica, sans-serif;}
+	
+	#footerContent{padding-top:19px;background:url(/design-images/footer-center-bak.jpg) no-repeat center;width:477px; height:66px; margin-top:17px;text-align:center;margin-left:auto;margin-right:auto;}			#footerContent p {color:#484848;padding-top:2px;}
+			#footerContent p a{color:#005AA8;padding:0 4px;}
+			#footerContent p#external a{color:#484848;text-decoration:none;padding:0;}
+#footerContent p a:hover{color:#76A904}
+#Vrss {color:black; margin-top:22px;width:160px;}
+#Vrss .addRssBlock{text-align:center;background-color:#E4E4E4;border:#bcbcbc 1px solid;margin-top:3px;}
+.addRssBlock a{color:#666666;font-size:0.90em;}
+
+
+/*search Results-may be added to external css*/
+/*
+*/      
+#SResults{}
+#SResults .SRtitle{background:url(http://images.devshed.com/tut/tutorialized-bckgtit2.gif) no-repeat top; height:31px;line-height:31px;padding-top:1px;margin-bottom:2px;padding-left:12px;}
+.SRtitle h2 {margin:0;padding:0;font-size:0.95em;color:#585858;background:url(/design-images/header_icons/search.jpg) no-repeat left top;padding-left:21px;line-height:28px;}
+#SResults em {font-style:normal;font-weight:bold;color:#222;padding-right:3px;}/*End featured block and summar, begin link ads*/
+/*+ ads etc.*/
+
+#SRads dl{clear:both;padding-top:20px;width:610px;}
+#SRads dt{height:20px;border-bottom:#d5d5d5 1px solid;clear:left;background:#F3F3F3 url(/design-images/dt-back.jpg) no-repeat left;padding-left:19px;color:#87888C;line-height:20px;font-size:0.90em;}
+#SRads dt span a{color:#015BA9;padding-left:6px;text-transform:none;}
+#SRads dd{padding-top:10px;}
+#SRads dd p img {padding:0px 10px 10px 0px;float:left;}
+
+/*search Results*/
+#TopPageinate {margin-bottom:10px;padding-top:12px;color:#454344;font-size:0.85em;}
+.pageinate{padding-top:10px;color:#454344;font-size:0.90em;margin-bottom:5px;font-family: Arial, Helvetica, sans-serif;font-size: 11px;color: #333333;	text-decoration: none;}
+.pageinate a {padding:0 3px;color:#454344;}
+.pageinate .bypage a{color:#015BA9;padding:0;font-size:1.0em;} 
+.displaying{padding-left:20px; padding-right:5px;font-weight:bold;}
+#lowerpaginate {clear:both;border-top:3px solid #B8B8B8;padding-top:10px;padding-bottom:10px;color:#454344;font-size:0.85em;text-align:center;font-family: Arial, Helvetica, sans-serif;font-size: 11px;color: #333333;	text-decoration: none;}
+#lowerpaginate a {padding:0 3px;color:#454344;}
+#lowerpaginate .bypage a{color:#015BA9;padding:0;font-size:1.0em;} 
+
+/*contact_us page*/
+#ContactUs{}
+#ContactUs .ContactTitle{background:url(http://images.devshed.com/tut/tutorialized-bckgtit2.gif) no-repeat top; height:31px;line-height:31px;padding-left:5px;padding-top:1px;margin-bottom:2px;}
+.ContactTitle h2 {margin:0;padding:0;background:url(/design-images/header_icons/contact.jpg) no-repeat left;padding-left:20px;font-size:0.95em;color:#585858;line-height:27px;height:27px;}
+
+#ContactContent {background-color:#F2F5FA;padding:8px;}
+#ContactContent p {line-height:135%;padding-bottom:3px;}
+#ContactContent p a {color:#005AA8;}
+#ContactContent p a:hover{color:#76A904;}
+
+/*end contact styles*/
+
+/*Faqs*/
+
+#FAQ{}
+#FAQ .MainTitle{background:url(http://images.devshed.com/tut/tutorialized-bckgtit2.gif) no-repeat top; height:30px;line-height:30px;padding-top:1px;margin-bottom:2px;padding-left:8px;}
+#FAQ .MainTitle h2 {margin:0;padding:0;font-size:0.95em;color:#585858;padding-left:0px;line-height:27px;}
+#FAQContent {padding:8px;}
+#FAQContent dl{color:#454344;font-size:.85em;letter-spacing:0.10em;}
+#FAQContent dt{font-weight:bold;padding-top:10px;color:#333;}
+#FAQContent dd{border-bottom:1px solid #dcdcdc;padding-bottom:10px;padding-top:3px;}
+#FAQContent a {color:#005AA8;}
+#FAQContent a:hover{color:#76A904;}
+
+/*user login */
+#userlogin .MainTitle{background:url(http://images.devshed.com/tut/tutorialized-bckgtit2.gif) no-repeat top;height:30px;line-height:30px;padding-top:1px;margin-bottom:2px;padding-left:8px;}
+#userlogin .MainTitle h2 {margin:0;padding:0;font-size:0.95em;color:#585858;padding-left:0px;line-height:27px;}
+#login p{padding:3px 8px;text-align:center;}
+#login a {color:#005AA8;}
+#login a:hover{color:#76A904;}
+
+#login form {text-align:center;margin-bottom:15px;}
+#login label {width:75px;height:18px;margin-top:5px;}
+#login input {width:125px;height:18px;margin-top:5px;border:1px solid #ccc;;}
+#login input.logbut {border:none;padding-left:3px;width:73px; height:23px;}
+
+/*error message*/
+#errorMessage{background-color:#F3f3f3;border:#D5D5D5 1px solid ;margin-bottom:7px;padding:5px 50px 5px 66px;font-size:1.0em;display:block;}
+#errorMessage span {font-weight:bold;color:red;text-transform:uppercase;}
+#errorMessage img {float:left;margin-right:9px;margin-bottom:5px;}
+
+/*Browse Categories*/
+
+#CatResults{}
+.CATtitle{background:url(http://images.devshed.com/tut/tutorialized-bckgtit2.gif) no-repeat; height:31px;line-height:31px;margin-bottom:3px;padding-left:0px;}
+.CATtitle h1 {margin:0;padding:0;font-size:0.95em;padding-left:13px;line-height:28px;color:#585858;}
+.CATtitle h1 a {text-decoration:none;color:#585858;}
+.CATtitle2{background:url(http://images.devshed.com/tut/tutorialized-bckgtit2.gif) no-repeat top; height:31px;line-height:31px;padding-top:1px;margin-bottom:0px;padding-left:0px;}
+/*category lists*/
+
+#categories{padding:10px 0;float:left;width:610px;margin-bottom:10px;}
+#categories ul{width:210px;float:left;padding-left:50px;}
+#categories ul li {padding:0;height:20px; line-height:20px; padding-left:20px;color:#484848;font-family:Arial, Helvetica, sans-serif;background:url(/design-images/links/folder_lblu.jpg) left no-repeat;}
+#categories ul li a {text-decoration:none;margin-right:4px;color:#444444;}
+#categories ul li a:hover{color:#025CA8;} 
+/*#categories ul li span{color:#025CA8;font-size:0.95em;}*/
+
+#BrowseTopResults {background:url(http://images.devshed.com/tut/tutorialized-bckgtit2.gif) no-repeat top;margin-top:10px;margin-bottom:0px;line-height:31px;color:#454344;font-size:0.85em;}
+.displaying{padding-left:20px; padding-right:5px;font-weight:bold;}
+#BrowseTopResults h2 {display:inline;font-size:1.0em;font-weight:normal;color:#454344;}
+#BrowseTopResults em {font-style:normal;font-weight:bold;margin-left:10px;}
+
+/*search forum -discuss*/
+#browseforum{clear:both;background-color:#2B98DB;margin-bottom:10px;padding:1px;text-align:center;}
+#browseforum .joinforum{border:solid 1px #86C1E9;padding:7px;text-align:center;}
+.joinforum a{background:url(http://images.devshed.com/tut/tutorialized-bckgtit3.gif) no-repeat;padding-left:27px;color:white;height:27px;line-height:27px;display:block;width:280px;font-weight:bold;margin-left:auto;margin-right:auto;}
+.joinforum a:hover {color:yellow;}
+
+/*End category block begin link ads category*/
+/*+ ads etc.*/
+
+#Catads dl{clear:both;padding-top:20px;width:610px;}
+#Catads dt{height:20px;border-bottom:#d5d5d5 1px solid;clear:left;background:#F3F3F3 url(/design-images/dt-back.jpg) no-repeat left;padding-left:19px;color:#87888C;line-height:20px;font-size:0.90em;}
+#Catads dt span a{color:#015BA9;padding-left:6px;text-transform:none;}
+#Catads dd{padding-top:10px;}
+#Catads dd p img {padding:0px 10px 10px 0px;float:left;}
+
+/*end category search results page*/
+/*begin tutorial header frame=Seperate style sheet-end*/
+
+/*begin profile table classes*/
+table.profiletab {color:#464646;}
+tr.header {background-color:#f3f3f3;font-weight:bold;text-align:center;}
+td.status {width:90px;}
+td.title{width:138px;}
+td.category{width:134px;}
+td.edit{width:85px;}
+tr.oddrow{text-align:center;}
+tr.evenrow{background-color:#f3f3f3;text-align:center;}
+
+/*comment styles*/
+/*show hide the containg dd*/
+dd.comments {}
+
+.commentwrapodd{clear:both;border-top:3px solid #ccc;background-color:#F2F5FA;color:#454344;border-bottom:2px solid #ccc;font-size:0.85em;padding-left:8px;}
+.commentwrapodd div.inforow{height:15px;padding-top:6px;}
+.commentwrapodd div.inforow ul {float:left;width:250px;height:15px;list-style-type:none;}
+.commentwrapodd div.inforow li{float:left;display:inline;padding:0 5px 0 0;height:13px;font-size:1.1em;}
+.commentwrapodd div.inforow li.name{font-weight:bold;height:13px;float:left;font-size:1.10em;} 
+.commentwrapodd div.inforow li.usrRated {padding-left:5px;}
+.commentwrapodd div.inforow span.date{float:right;width:150px;text-align:right;font-size:1.1em;}
+.commentwrapodd div.titlerow{clear:left;color:#0259A9;}
+.commentwrapodd div.titlerow span.commentTitle{font-weight:bold;font-size:1.0em;}
+.commentwrapodd div.comment {padding-top:11px;padding-bottom:12px;font-size:1.5em;}
+.commentwrapodd div.comment p{color:#0259A9;line-height:135%;font-size:2.0em;}
+
+/*even rows*/
+.commentwrapeven{clear:both;background-color:#fff;color:#454344;border-bottom:2px solid #ccc;font-size:0.85em;padding-left:8px;}
+.commentwrapeven div.inforow{height:15px;padding-top:6px;}
+.commentwrapeven div.inforow ul {float:left;width:250px;height:15px;list-style-type:none;}
+.commentwrapeven div.inforow li{float:left;display:inline;padding:0 5px 0 0;height:13px;font-size:1.1em;}
+.commentwrapeven div.inforow li.name{font-weight:bold;height:13px;float:left;font-size:1.10em;} 
+.commentwrapeven div.inforow li.usrRated {padding-left:5px;}
+.commentwrapeven div.inforow span.date{float:right;width:150px;text-align:right;font-size:1.1em;}
+.commentwrapeven div.titlerow{clear:left;color:#0259A9;}
+.commentwrapeven div.titlerow span.commentTitle{font-weight:bold;font-size:1.0em;}
+.commentwrapeven div.comment {padding-top:11px;padding-bottom:12px;font-size:1.5em;}
+.commentwrapeven div.comment p{color:#0259A9;line-height:135%;font-size:2.0em;}
+
+.addcomment {clear:both;margin-bottom:10px;height:19px;padding-top:7px;font-size:.90em;padding-left:8px;}
+/*.addcomment a{color:#0259A9;}
+.addcomment a:hover{color:#76A904;} */
+.addcomment span.left {float:left;}
+.addcomment span.right {float:right;}
+.addcomment img {border:none;}
+
+.overlink {
+  	 cursor:pointer; 
+  	 cursor:hand;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #FFFFFF;
+        text-decoration: underline;
+}
+
+A.network:link, A.network:visited, A.network:active { 
+  font-family: Verdana,Arial,Helvetica; 
+  font-size: 9px; 
+  color: #000000; 
+  text-decoration: none;
+}
+
+A.network:hover { 
+  color:#000000; 
+  text-decoration: underline;
+}
+/****************
+ End of old CSS
+ ***************/
+
+/****************
+ Start of new CSS
+ ***************/
+
+
+.bckg {
+	background-image: url(http://images.devshed.com/common/bckg.jpg);
+	background-repeat: repeat;
+}
+.sidenavgray {
+	background-image: url(http://images.devshed.com/common/bckgsidenavgray.gif);
+	height: 20px;
+	width: 155px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	text-indent: 8px;
+}
+.sidenavtxtgray {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	background-image: url(http://images.devshed.com/common/devshed/sidenavtxt-gray.gif);
+	text-indent: 8px;
+	color: #333333;
+}
+.sidenavgray2 {
+	background-image: url(http://images.devshed.com/tut/tutorialized-bckgsidenav.gif);
+	height: 16px;
+	width: 155px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	text-indent: 8px;
+}
+.bckgbanner {
+	background-image: url(http://images.devshed.com/common/bckg-topbanner.gif);
+	height: 115px;
+	background-repeat: repeat;
+}
+.border {
+	border: 1px dotted #CCCCCC;
+}
+.login {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+}
+.menu {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+	top: 8px;
+	bottom: 8px;
+	background-color: #FFFFFF;
+	background-position: 24px;
+	text-decoration: none;
+}
+.menu-on {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FF6600;
+}
+
+
+.titblack {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+.txtblack {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	line-height: 18px;
+}
+.subtitblack {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+}
+.titbox {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #333333;
+	text-decoration: none;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.txtbox {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	line-height: 16px;
+}
+.toptxt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.footergray {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+	text-decoration: none;
+}
+.footerblack {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+}
+.ad {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #003366;
+	text-decoration: none;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.abblue {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #003366;
+	text-decoration: none;
+}
+.bckgtit {
+	background-image: url(http://images.devshed.com/tut/tutorialized-bckgtit.gif);
+	height: 27px;
+	width: 662px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+}
+.txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+}
+.linegray {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	background-color: #E5E5E5;
+	height: 20px;
+}
+.linegray2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	background-color: #F5F5F5;
+	height: 20px;
+}
+.morearticles {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+	color: #0066FF;
+	line-height: 24px;
+}
+.totalarticles {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 11px;
+	color: #666666;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 18px;
+}
+.pagenumber {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+	font-style: italic;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.pagenumber-small {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #0066CC;
+	font-weight: bold;
+}
+
+
+.sidenavbckgwhite {
+	background-image: url(http://images.devshed.com/sc/seochat-bckgsidenavwhite.gif);
+	height: 20px;
+	width: 155px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	text-indent: 8px;
+}
+.site-index {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #0066CC;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.slogan {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 12px;
+	line-height: 12px;
+	text-indent: 2px;
+}
+.txtwhite {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.site-sidenavbckg {
+	background-image: url(http://images.devshed.com/tut/tutorialized-bckgsidenav.gif);
+	height: 20px;
+	width: 155px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	text-indent: 8px;
+}
+.site-bckgtit {
+	background-image: url(http://images.devshed.com/tut/tutorialized-bckgtit.gif);
+	height: 20px;
+	width: 166px;
+	text-indent: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: normal;
+}
+.site-bckgtit2 {
+	background-image: url(http://images.devshed.com/tut/tutorialized-bckgtit2.gif);
+	height: 31px;
+	width: 610px;
+	text-indent: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: normal;
+}
+.site-bckgtit3,a.site-bckgtit3 {
+	background-image: url(http://images.devshed.com/tut/tutorialized-bckgtit3.gif);
+	height: 28px;
+	width: 610px;
+	text-indent: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: normal;
+}
+.site-txt {
+	text-indent: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: normal;
+}
+.site-tit1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #0066CC;
+	text-decoration: none;
+	line-height: 20px;
+}
+.pagename {
+	font-family: MetroDF, Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	color: #000000;
+	text-decoration: none;
+}
+.whitepapers {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 13px;
+	color: #0066CC;
+	text-decoration: underline;
+}
+.verysmtitle, A.verysmtitle:link, A.verysmtitle:visited, A.verysmtitle:active {
+       color:#000000;
+       font-family:"Trebuchet MS","Impact",Helvetica,Arial,Verdana,sans-serif;
+       font-size:10px;
+       font-weight:bold;
+       text-decoration:none;
+}
+.reallysmalltitle, A.reallysmalltitle:link, A.reallysmalltitle:visited, A.reallysmalltitle:active {
+       color:#000000;
+       font-family:"Trebuchet MS","Impact",Helvetica,Arial,Verdana,sans-serif;
+       font-size:25px;
+       font-weight:bold;
+       text-decoration:none;
+}
+a h1{
+       color:#000000;
+       font-family:"Trebuchet MS","Impact",Helvetica,Arial,Verdana,sans-serif;
+       font-size:35px;
+       font-weight:bold;
+       text-decoration:none;
+       display: inline;
+}
+a h1 verysmtitle{
+       color:#000000;
+       font-family:"Trebuchet MS","Impact",Helvetica,Arial,Verdana,sans-serif;
+       font-size:20px;
+       font-weight:bold;
+       text-decoration:none;
+}
+a h1 reallysmalltitle{
+       color:#000000;
+       font-family:"Trebuchet MS","Impact",Helvetica,Arial,Verdana,sans-serif;
+       font-size:25px;
+       font-weight:bold;
+       text-decoration:none;
+}
+.smalltitle, A.smalltitle:link, A.smalltitle:visited, A.smalltitle:active {
+       color:#000000;
+       font-family:"Trebuchet MS","Impact",Helvetica,Arial,Verdana,sans-serif;
+       font-size:35px;
+       font-weight:bold;
+       text-decoration:none;
+}
+.title2, a.title2:link, a.title2:visited, a.title2:active {
+	color:#000000;
+       font-family:"Trebuchet MS","Impact",Helvetica,Arial,Verdana,sans-serif;
+       font-size:40px;
+       font-weight:bold;
+       text-decoration:none; 
+} 
+.pathwaybg, a.pathwaybg:link, a.pathway:visited, a.pathwaybg:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration:none;
+}
+.title_readon {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+}
+A.title_readon:hover {
+  color:blue;
+  text-decoration: underline;
+}
+.subtitblack2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:10.5px;
+	color: #333333;
+	text-decoration: none;
+}  
+.art_titblack {
+	color: #333333;
+	font-family: Georgia,"Times New Roman",Times,serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.ibm_links {
+	font-size: 13px;
+}
+.trademark, A.trademark:link, A.trademark:visited, A.trademark:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+}
+/****************
+ End of new CSS
+ ***************/
